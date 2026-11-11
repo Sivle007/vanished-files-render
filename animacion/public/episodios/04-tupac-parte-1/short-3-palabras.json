@@ -1,0 +1,427 @@
+[
+ {
+  "text": "I",
+  "startMs": 0,
+  "endMs": 380
+ },
+ {
+  "text": "want",
+  "startMs": 380,
+  "endMs": 520
+ },
+ {
+  "text": "you",
+  "startMs": 520,
+  "endMs": 660
+ },
+ {
+  "text": "to",
+  "startMs": 660,
+  "endMs": 740
+ },
+ {
+  "text": "watch",
+  "startMs": 740,
+  "endMs": 900
+ },
+ {
+  "text": "the",
+  "startMs": 900,
+  "endMs": 1120
+ },
+ {
+  "text": "fight",
+  "startMs": 1120,
+  "endMs": 1340
+ },
+ {
+  "text": "that",
+  "startMs": 1340,
+  "endMs": 1600
+ },
+ {
+  "text": "may",
+  "startMs": 1600,
+  "endMs": 1720
+ },
+ {
+  "text": "have",
+  "startMs": 1720,
+  "endMs": 1880
+ },
+ {
+  "text": "killed",
+  "startMs": 1880,
+  "endMs": 2140
+ },
+ {
+  "text": "Tupac.",
+  "startMs": 2140,
+  "endMs": 2600
+ },
+ {
+  "text": "MGM",
+  "startMs": 3600,
+  "endMs": 4240
+ },
+ {
+  "text": "Grand,",
+  "startMs": 4240,
+  "endMs": 4760
+ },
+ {
+  "text": "Las",
+  "startMs": 4940,
+  "endMs": 5040
+ },
+ {
+  "text": "Vegas.",
+  "startMs": 5040,
+  "endMs": 5420
+ },
+ {
+  "text": "Tyson",
+  "startMs": 5960,
+  "endMs": 6260
+ },
+ {
+  "text": "has",
+  "startMs": 6260,
+  "endMs": 6520
+ },
+ {
+  "text": "just",
+  "startMs": 6520,
+  "endMs": 6700
+ },
+ {
+  "text": "won",
+  "startMs": 6700,
+  "endMs": 6940
+ },
+ {
+  "text": "in",
+  "startMs": 6940,
+  "endMs": 7100
+ },
+ {
+  "text": "under",
+  "startMs": 7100,
+  "endMs": 7280
+ },
+ {
+  "text": "two",
+  "startMs": 7280,
+  "endMs": 7500
+ },
+ {
+  "text": "minutes.",
+  "startMs": 7500,
+  "endMs": 7740
+ },
+ {
+  "text": "Tupac",
+  "startMs": 8880,
+  "endMs": 9240
+ },
+ {
+  "text": "spots",
+  "startMs": 9240,
+  "endMs": 9500
+ },
+ {
+  "text": "a",
+  "startMs": 9500,
+  "endMs": 9700
+ },
+ {
+  "text": "young",
+  "startMs": 9700,
+  "endMs": 9820
+ },
+ {
+  "text": "man",
+  "startMs": 9820,
+  "endMs": 10080
+ },
+ {
+  "text": "in",
+  "startMs": 10080,
+  "endMs": 10200
+ },
+ {
+  "text": "the",
+  "startMs": 10200,
+  "endMs": 10320
+ },
+ {
+  "text": "lobby.",
+  "startMs": 10320,
+  "endMs": 10600
+ },
+ {
+  "text": "Orlando",
+  "startMs": 11140,
+  "endMs": 11420
+ },
+ {
+  "text": "Anderson.",
+  "startMs": 11420,
+  "endMs": 11980
+ },
+ {
+  "text": "He",
+  "startMs": 13080,
+  "endMs": 13340
+ },
+ {
+  "text": "runs",
+  "startMs": 13340,
+  "endMs": 13540
+ },
+ {
+  "text": "at",
+  "startMs": 13540,
+  "endMs": 13740
+ },
+ {
+  "text": "him.",
+  "startMs": 13740,
+  "endMs": 13940
+ },
+ {
+  "text": "His",
+  "startMs": 14180,
+  "endMs": 14280
+ },
+ {
+  "text": "crew",
+  "startMs": 14280,
+  "endMs": 14480
+ },
+ {
+  "text": "joins",
+  "startMs": 14480,
+  "endMs": 14840
+ },
+ {
+  "text": "in.",
+  "startMs": 14840,
+  "endMs": 15140
+ },
+ {
+  "text": "Security",
+  "startMs": 15600,
+  "endMs": 15900
+ },
+ {
+  "text": "cameras",
+  "startMs": 15900,
+  "endMs": 16380
+ },
+ {
+  "text": "record",
+  "startMs": 16380,
+  "endMs": 16760
+ },
+ {
+  "text": "everything.",
+  "startMs": 16760,
+  "endMs": 17320
+ },
+ {
+  "text": "Nobody",
+  "startMs": 18400,
+  "endMs": 18820
+ },
+ {
+  "text": "presses",
+  "startMs": 18820,
+  "endMs": 19240
+ },
+ {
+  "text": "charges.",
+  "startMs": 19240,
+  "endMs": 19780
+ },
+ {
+  "text": "It",
+  "startMs": 20160,
+  "endMs": 20280
+ },
+ {
+  "text": "looks",
+  "startMs": 20280,
+  "endMs": 20420
+ },
+ {
+  "text": "like",
+  "startMs": 20420,
+  "endMs": 20600
+ },
+ {
+  "text": "nothing.",
+  "startMs": 20600,
+  "endMs": 20940
+ },
+ {
+  "text": "But",
+  "startMs": 22144,
+  "endMs": 22394
+ },
+ {
+  "text": "that",
+  "startMs": 22200,
+  "endMs": 22340
+ },
+ {
+  "text": "night,",
+  "startMs": 22340,
+  "endMs": 22580
+ },
+ {
+  "text": "a",
+  "startMs": 22900,
+  "endMs": 22980
+ },
+ {
+  "text": "white",
+  "startMs": 22980,
+  "endMs": 23200
+ },
+ {
+  "text": "Cadillac",
+  "startMs": 23200,
+  "endMs": 23740
+ },
+ {
+  "text": "finds",
+  "startMs": 23740,
+  "endMs": 24040
+ },
+ {
+  "text": "Tupac",
+  "startMs": 24040,
+  "endMs": 24480
+ },
+ {
+  "text": "at",
+  "startMs": 24480,
+  "endMs": 24660
+ },
+ {
+  "text": "a",
+  "startMs": 24660,
+  "endMs": 24740
+ },
+ {
+  "text": "red",
+  "startMs": 24740,
+  "endMs": 24900
+ },
+ {
+  "text": "light.",
+  "startMs": 24900,
+  "endMs": 25220
+ },
+ {
+  "text": "Prosecutors",
+  "startMs": 26364,
+  "endMs": 26984
+ },
+ {
+  "text": "would",
+  "startMs": 26984,
+  "endMs": 27124
+ },
+ {
+  "text": "later",
+  "startMs": 27124,
+  "endMs": 27324
+ },
+ {
+  "text": "say",
+  "startMs": 27324,
+  "endMs": 27624
+ },
+ {
+  "text": "it",
+  "startMs": 27624,
+  "endMs": 27944
+ },
+ {
+  "text": "all",
+  "startMs": 27944,
+  "endMs": 28104
+ },
+ {
+  "text": "began",
+  "startMs": 28104,
+  "endMs": 28384
+ },
+ {
+  "text": "with",
+  "startMs": 28384,
+  "endMs": 28684
+ },
+ {
+  "text": "the",
+  "startMs": 28684,
+  "endMs": 28784
+ },
+ {
+  "text": "fight",
+  "startMs": 28784,
+  "endMs": 29044
+ },
+ {
+  "text": "that",
+  "startMs": 29044,
+  "endMs": 29384
+ },
+ {
+  "text": "may",
+  "startMs": 29384,
+  "endMs": 29524
+ },
+ {
+  "text": "have",
+  "startMs": 29524,
+  "endMs": 29684
+ },
+ {
+  "text": "killed",
+  "startMs": 29684,
+  "endMs": 29964
+ },
+ {
+  "text": "Tupac.",
+  "startMs": 29964,
+  "endMs": 31626
+ },
+ {
+  "text": "Full",
+  "startMs": 31626,
+  "endMs": 31876
+ },
+ {
+  "text": "episode",
+  "startMs": 31764,
+  "endMs": 32164
+ },
+ {
+  "text": "on",
+  "startMs": 32164,
+  "endMs": 32384
+ },
+ {
+  "text": "Vanished",
+  "startMs": 32384,
+  "endMs": 32644
+ },
+ {
+  "text": "Files.",
+  "startMs": 32644,
+  "endMs": 33144
+ }
+]

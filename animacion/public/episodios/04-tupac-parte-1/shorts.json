@@ -1,0 +1,126 @@
+{
+ "carpeta": "04-tupac-parte-1",
+ "shorts": [
+  {
+   "titulo": "The red light",
+   "audio": "short-1.mp3",
+   "duracionMs": 34420,
+   "parrafos": [
+    {
+     "texto": "Let me tell you about thirteen seconds at a red light.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "Las Vegas, 1996. Suge Knight is driving. Tupac sits beside him.",
+     "inicioMs": 3904
+    },
+    {
+     "texto": "Now watch the car pulling up on the right.",
+     "inicioMs": 9856
+    },
+    {
+     "texto": "A white Cadillac.",
+     "inicioMs": 12779
+    },
+    {
+     "texto": "Hours earlier, Tupac had attacked a young man in a hotel lobby. Cameras caught it.",
+     "inicioMs": 14770
+    },
+    {
+     "texto": "The Cadillac's back window comes down.",
+     "inicioMs": 20150
+    },
+    {
+     "texto": "Four bullets. Six days later, Tupac is dead.",
+     "inicioMs": 23132
+    },
+    {
+     "texto": "And for twenty-seven years, nobody pays for those thirteen seconds at a red light.",
+     "inicioMs": 26713
+    },
+    {
+     "texto": "Full episode on Vanished Files.",
+     "inicioMs": 32006
+    }
+   ]
+  },
+  {
+   "titulo": "Shot five times",
+   "audio": "short-2.mp3",
+   "duracionMs": 34065,
+   "parrafos": [
+    {
+     "texto": "Tupac was shot five times… and walked out of the hospital.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "New York, 1994. A recording studio lobby. Armed men are waiting.",
+     "inicioMs": 4490
+    },
+    {
+     "texto": "They rob him. They open fire.",
+     "inicioMs": 10234
+    },
+    {
+     "texto": "He survives. Then he checks himself out, against his doctors' advice.",
+     "inicioMs": 12936
+    },
+    {
+     "texto": "But one question won't leave him. Who was upstairs that night?",
+     "inicioMs": 17787
+    },
+    {
+     "texto": "He blamed people in the New York rap world. They always denied it.",
+     "inicioMs": 21813
+    },
+    {
+     "texto": "That's how a feud started… with a man shot five times who walked out of the hospital.",
+     "inicioMs": 26349
+    },
+    {
+     "texto": "Full episode on Vanished Files.",
+     "inicioMs": 31651
+    }
+   ]
+  },
+  {
+   "titulo": "The fight on camera",
+   "audio": "short-3.mp3",
+   "duracionMs": 34040,
+   "parrafos": [
+    {
+     "texto": "I want you to watch the fight that may have killed Tupac.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "MGM Grand, Las Vegas. Tyson has just won in under two minutes.",
+     "inicioMs": 3780
+    },
+    {
+     "texto": "Tupac spots a young man in the lobby. Orlando Anderson.",
+     "inicioMs": 8954
+    },
+    {
+     "texto": "He runs at him. His crew joins in. Security cameras record everything.",
+     "inicioMs": 13269
+    },
+    {
+     "texto": "Nobody presses charges. It looks like nothing.",
+     "inicioMs": 18543
+    },
+    {
+     "texto": "But that night, a white Cadillac finds Tupac at a red light.",
+     "inicioMs": 22144
+    },
+    {
+     "texto": "Prosecutors would later say it all began with the fight that may have killed Tupac.",
+     "inicioMs": 26364
+    },
+    {
+     "texto": "Full episode on Vanished Files.",
+     "inicioMs": 31626
+    }
+   ]
+  }
+ ]
+}

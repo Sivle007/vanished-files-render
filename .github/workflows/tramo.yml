@@ -1,0 +1,39 @@
+# Renderiza (sin audio) un rango de fotogramas de una composicion, para rehacer un bloque y empalmarlo.
+# Se lanza con: gh workflow run tramo.yml -f composicion=Jonestown2 -f desde=15055 -f hasta=16474
+name: Tramo
+
+on:
+  workflow_dispatch:
+    inputs:
+      composicion:
+        required: true
+      desde:
+        required: true
+      hasta:
+        required: true
+
+jobs:
+  tramo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    defaults:
+      run:
+        working-directory: animacion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: animacion/package-lock.json
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libgbm1 libxrandr2 libxkbcommon0 libxfixes3 libxcomposite1 libxdamage1 libpango-1.0-0 libcairo2 libcups2 libasound2t64
+      - name: Biblioteca de sonido
+        run: node ../herramientas/sonidos.mjs
+      - run: npm ci
+      - run: npx remotion browser ensure
+      - run: node render-tramo.mjs "${{ inputs.composicion }}" "${{ inputs.desde }}" "${{ inputs.hasta }}" tramo.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tramo
+          path: animacion/tramo.mp4
+          retention-days: 3

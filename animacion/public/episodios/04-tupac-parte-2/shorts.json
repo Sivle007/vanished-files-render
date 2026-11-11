@@ -1,0 +1,126 @@
+{
+ "carpeta": "04-tupac-parte-2",
+ "shorts": [
+  {
+   "titulo": "He confessed on TV",
+   "audio": "short-1.mp3",
+   "duracionMs": 32315,
+   "parrafos": [
+    {
+     "texto": "He told the world on TV that he was in the car that killed Tupac.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "His name is Keffe D.",
+     "inicioMs": 4528
+    },
+    {
+     "texto": "In 2018, he faces a camera and says it. Front passenger seat. The shots came from the back.",
+     "inicioMs": 6732
+    },
+    {
+     "texto": "Then he writes a book about it.",
+     "inicioMs": 13399
+    },
+    {
+     "texto": "So why wasn't he arrested?",
+     "inicioMs": 15699
+    },
+    {
+     "texto": "Ten years earlier, he had told detectives in secret. That deal protected him.",
+     "inicioMs": 18017
+    },
+    {
+     "texto": "Going public didn't. In 2023, police came for the man who told the world on TV.",
+     "inicioMs": 23208
+    },
+    {
+     "texto": "Full episode on Vanished Files.",
+     "inicioMs": 29901
+    }
+   ]
+  },
+  {
+   "titulo": "Under three hours",
+   "audio": "short-2.mp3",
+   "duracionMs": 34895,
+   "parrafos": [
+    {
+     "texto": "After twenty-nine years, the jury needed under three hours.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "Las Vegas, August 2026. On trial, the last man alive from the Cadillac.",
+     "inicioMs": 4378
+    },
+    {
+     "texto": "No gun. No fingerprints. No new witness.",
+     "inicioMs": 10562
+    },
+    {
+     "texto": "So what convicted him?",
+     "inicioMs": 13936
+    },
+    {
+     "texto": "His own words. Every interview. Every page of his book.",
+     "inicioMs": 16124
+    },
+    {
+     "texto": "The defence called it street stories.",
+     "inicioMs": 20304
+    },
+    {
+     "texto": "Guilty. First-degree murder. Forty years to life. He says he'll appeal.",
+     "inicioMs": 22989
+    },
+    {
+     "texto": "Because after twenty-nine years, the jury needed under three hours.",
+     "inicioMs": 28031
+    },
+    {
+     "texto": "Full episode on Vanished Files.",
+     "inicioMs": 32481
+    }
+   ]
+  },
+  {
+   "titulo": "Who pulled the trigger?",
+   "audio": "short-3.mp3",
+   "duracionMs": 34065,
+   "parrafos": [
+    {
+     "texto": "Tupac's case is closed. But I still can't tell you who pulled the trigger.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "In 2026, Keffe D was convicted of organizing the shooting.",
+     "inicioMs": 4978
+    },
+    {
+     "texto": "But he wasn't the shooter. He says the shots came from the back seat.",
+     "inicioMs": 9865
+    },
+    {
+     "texto": "So who was back there?",
+     "inicioMs": 14041
+    },
+    {
+     "texto": "According to him, his own nephew. Orlando Anderson. The man Tupac attacked that night.",
+     "inicioMs": 16118
+    },
+    {
+     "texto": "Anderson always denied it. He died in 1998.",
+     "inicioMs": 21982
+    },
+    {
+     "texto": "So it never reached a courtroom. And that's why I still can't tell you who pulled the trigger.",
+     "inicioMs": 26293
+    },
+    {
+     "texto": "Full episode on Vanished Files.",
+     "inicioMs": 31651
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+# Renderiza (sin audio) varios Shorts verticales en paralelo; el audio se mezcla despues en local.
+# Se lanza con: gh workflow run shorts.yml -f lista="Short-J1-1 Short-J1-2"
+name: Shorts
+
+on:
+  workflow_dispatch:
+    inputs:
+      lista:
+        description: Ids de las composiciones separados por espacios
+        required: true
+
+jobs:
+  preparar:
+    runs-on: ubuntu-latest
+    outputs:
+      matriz: ${{ steps.m.outputs.matriz }}
+    steps:
+      - id: m
+        run: echo "matriz=$(echo '${{ inputs.lista }}' | jq -R -c 'split(" ") | map(select(length>0))')" >> "$GITHUB_OUTPUT"
+
+  short:
+    needs: preparar
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        id: ${{ fromJson(needs.preparar.outputs.matriz) }}
+    defaults:
+      run:
+        working-directory: animacion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: animacion/package-lock.json
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libgbm1 libxrandr2 libxkbcommon0 libxfixes3 libxcomposite1 libxdamage1 libpango-1.0-0 libcairo2 libcups2 libasound2t64
+      - name: Biblioteca de sonido
+        run: node ../herramientas/sonidos.mjs
+      - run: npm ci
+      - run: npx remotion browser ensure
+      - run: node render-tramo.mjs "${{ matrix.id }}" 0 -1 "${{ matrix.id }}.mp4"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.id }}
+          path: animacion/${{ matrix.id }}.mp4
+          retention-days: 3

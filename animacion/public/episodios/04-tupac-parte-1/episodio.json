@@ -1,0 +1,442 @@
+{
+ "carpeta": "04-tupac-parte-1",
+ "bloques": [
+  {
+   "titulo": "Hook",
+   "audio": "01-hook.mp3",
+   "duracionMs": 23250,
+   "parrafos": [
+    {
+     "texto": "September 7, 1996. Las Vegas. A black BMW stops at a red light on Flamingo Road.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "A white Cadillac pulls up beside it.",
+     "inicioMs": 8171
+    },
+    {
+     "texto": "Seconds later, the most famous rapper in the world has been shot four times.",
+     "inicioMs": 11050
+    },
+    {
+     "texto": "For twenty-seven years, nobody was charged with his murder.",
+     "inicioMs": 15962
+    },
+    {
+     "texto": "This is the murder of Tupac Shakur. Part one.",
+     "inicioMs": 19949
+    }
+   ]
+  },
+  {
+   "titulo": "The real question",
+   "audio": "02-the-real-question.mp3",
+   "duracionMs": 37130,
+   "parrafos": [
+    {
+     "texto": "You probably think you know this story. A rap feud. East Coast against West Coast. A drive-by in Las Vegas.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "But here's what makes this case strange.",
+     "inicioMs": 7729
+    },
+    {
+     "texto": "The people in that Cadillac were never a complete mystery. Within weeks, there was a suspect. Within a few years, one of the men in that car was talking about it. To detectives. On television. In a book.",
+     "inicioMs": 10460
+    },
+    {
+     "texto": "So the real question isn't who killed Tupac Shakur.",
+     "inicioMs": 22509
+    },
+    {
+     "texto": "It's this. How did a murder this famous, with this many people talking, stay unsolved for almost three decades?",
+     "inicioMs": 26323
+    },
+    {
+     "texto": "To understand that, we have to start long before Las Vegas.",
+     "inicioMs": 33299
+    }
+   ]
+  },
+  {
+   "titulo": "Born into a fight",
+   "audio": "03-born-into-a-fight.mp3",
+   "duracionMs": 99100,
+   "parrafos": [
+    {
+     "texto": "Tupac Amaru Shakur was born on June 16, 1971, in New York City.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "A month earlier, his mother, Afeni Shakur, had been sitting in a courtroom. She was a member of the Black Panther Party, one of twenty-one Panthers accused of planning bombings in New York. She defended herself in court, while pregnant. In May 1971, she and the others were acquitted.",
+     "inicioMs": 6462
+    },
+    {
+     "texto": "The case became known as the trial of the Panther 21. It was one of the longest trials in New York's history. The jury took less than an hour to find them not guilty.",
+     "inicioMs": 23409
+    },
+    {
+     "texto": "So Tupac came into the world just after his mother won her freedom. She named him after Túpac Amaru, an Indigenous leader who rebelled against Spanish rule in Peru.",
+     "inicioMs": 34251
+    },
+    {
+     "texto": "From his first day, he carried a name about resistance.",
+     "inicioMs": 44642
+    },
+    {
+     "texto": "His childhood was hard. Money was always short. The family moved again and again. New York. Then Baltimore, where Tupac studied acting, poetry and dance at a school for the arts. Then Marin City, California.",
+     "inicioMs": 48403
+    },
+    {
+     "texto": "In Baltimore, he met a young student who would become one of his closest friends, a future actress named Jada Pinkett.",
+     "inicioMs": 62626
+    },
+    {
+     "texto": "Friends from those years remembered a teenager who read constantly, who could quote Shakespeare, and who wrote poems about the world he saw around him. Poverty. Violence. Mothers struggling to raise kids alone.",
+     "inicioMs": 70280
+    },
+    {
+     "texto": "When the family moved to California, life got harder. Marin City was small and poor. Tupac sold drugs for a time, and saw friends fall into the same life.",
+     "inicioMs": 83320
+    },
+    {
+     "texto": "That combination, a poet's mind and a hard life, would define everything he made.",
+     "inicioMs": 93861
+    }
+   ]
+  },
+  {
+   "titulo": "The rise",
+   "audio": "04-the-rise.mp3",
+   "duracionMs": 85765,
+   "parrafos": [
+    {
+     "texto": "In 1990, Tupac joined the tour of the hip-hop group Digital Underground as a dancer and roadie. He carried equipment, danced on stage, and waited for a chance. In 1991, he got one: his first verse on a record, on a song called \"Same Song\".",
+     "inicioMs": 0
+    },
+    {
+     "texto": "Within a year, he had his own record deal.",
+     "inicioMs": 16371
+    },
+    {
+     "texto": "His first album, released in 1991, was raw and political. It talked about police violence and poverty. It was so controversial that the Vice President of the United States, Dan Quayle, publicly said it had no place in American society.",
+     "inicioMs": 19489
+    },
+    {
+     "texto": "Tupac didn't slow down. He starred in films, first \"Juice\" in 1992, then \"Poetic Justice\" with Janet Jackson.",
+     "inicioMs": 35385
+    },
+    {
+     "texto": "His songs could be furious one minute and tender the next. He wrote about a teenage mother abandoned by everyone. About respecting women. About his own mother, in a song called \"Dear Mama\".",
+     "inicioMs": 43497
+    },
+    {
+     "texto": "But his reputation was growing in another direction too. He was arrested several times. In 1993, he was charged after a shooting involving two off-duty police officers in Atlanta. Those charges were later dropped. The same year, he spent fifteen days in jail for assaulting a film director.",
+     "inicioMs": 55007
+    },
+    {
+     "texto": "By 1994, Tupac Shakur was one of the most famous young men in America. And one of the most watched.",
+     "inicioMs": 73752
+    },
+    {
+     "texto": "That year, two things happened within twenty-four hours that would change his life.",
+     "inicioMs": 81029
+    }
+   ]
+  },
+  {
+   "titulo": "The Quad Studios shooting",
+   "audio": "05-the-quad-studios-shooting.mp3",
+   "duracionMs": 63595,
+   "parrafos": [
+    {
+     "texto": "On the night of November 30, 1994, Tupac walked into the lobby of Quad Recording Studios in New York.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "Men with guns were waiting. They robbed him. He was shot five times.",
+     "inicioMs": 7855
+    },
+    {
+     "texto": "He survived. Incredibly, he checked himself out of hospital against medical advice.",
+     "inicioMs": 12585
+    },
+    {
+     "texto": "The next day, a jury delivered its verdict in a separate case. Tupac was convicted of sexual abuse. He was later sentenced to prison.",
+     "inicioMs": 18219
+    },
+    {
+     "texto": "But he never stopped thinking about that night at the studio. Upstairs, at the time, were people from the New York rap world, including Sean Combs and The Notorious B.I.G.",
+     "inicioMs": 26652
+    },
+    {
+     "texto": "That detail hurt more than the bullets. Biggie had been his friend. In the early nineties, the two had hung out, shared stages, and talked about music for hours. Tupac had even given him advice when Biggie was starting out.",
+     "inicioMs": 37339
+    },
+    {
+     "texto": "Now Tupac came to believe they knew something about the attack.",
+     "inicioMs": 50858
+    },
+    {
+     "texto": "They always denied any involvement. No one was ever convicted of the Quad shooting.",
+     "inicioMs": 54789
+    },
+    {
+     "texto": "But in Tupac's mind, a line had been drawn.",
+     "inicioMs": 60442
+    }
+   ]
+  },
+  {
+   "titulo": "Prison and Death Row",
+   "audio": "06-prison-and-death-row.mp3",
+   "duracionMs": 74340,
+   "parrafos": [
+    {
+     "texto": "In 1995, Tupac went to prison in New York.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "While he was inside, his album \"Me Against the World\" went to number one.",
+     "inicioMs": 4362
+    },
+    {
+     "texto": "Then, in October 1995, a man arrived with a deal. Marion \"Suge\" Knight, the head of Death Row Records in Los Angeles. A bond of one point four million dollars was posted, and Tupac walked out of prison. In return, he signed with Death Row.",
+     "inicioMs": 8986
+    },
+    {
+     "texto": "In February 1996, he released \"All Eyez on Me\", a double album. It would go on to sell more than ten million copies.",
+     "inicioMs": 25511
+    },
+    {
+     "texto": "Death Row was the most feared label in hip-hop. Its rivals were in New York, at Bad Boy Records, run by Sean Combs.",
+     "inicioMs": 33994
+    },
+    {
+     "texto": "Tupac threw himself into the fight. He recorded at an incredible pace, sometimes several songs in a single night. In June 1996, he released a track called \"Hit 'Em Up\", one of the most aggressive diss records ever made, attacking his rivals by name.",
+     "inicioMs": 41921
+    },
+    {
+     "texto": "The media called it the East Coast–West Coast war. Fans took sides.",
+     "inicioMs": 57912
+    },
+    {
+     "texto": "And the people around the music were not just musicians. Some had connections to street gangs in Los Angeles. On the Death Row side, Bloods. On the other side of town, their enemies, the Crips.",
+     "inicioMs": 62810
+    }
+   ]
+  },
+  {
+   "titulo": "The fight at the MGM",
+   "audio": "07-the-fight-at-the-mgm.mp3",
+   "duracionMs": 53420,
+   "parrafos": [
+    {
+     "texto": "On September 7, 1996, Tupac flew to Las Vegas with Suge Knight to watch Mike Tyson fight Bruce Seldon at the MGM Grand.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "The fight lasted less than two minutes.",
+     "inicioMs": 9960
+    },
+    {
+     "texto": "Afterwards, walking through the hotel lobby, someone in Tupac's group pointed out a young man. His name was Orlando Anderson. He was a member of the Southside Compton Crips.",
+     "inicioMs": 12817
+    },
+    {
+     "texto": "Tupac ran over and attacked him. Others from the Death Row entourage joined in.",
+     "inicioMs": 23833
+    },
+    {
+     "texto": "Hotel security cameras recorded the whole thing.",
+     "inicioMs": 29371
+    },
+    {
+     "texto": "The video lasts only seconds. Security broke it up. Anderson didn't press charges. Tupac went back to his hotel to change.",
+     "inicioMs": 33004
+    },
+    {
+     "texto": "But Orlando Anderson wasn't alone in Las Vegas that night. His uncle was in town too. And word of the beating spread fast.",
+     "inicioMs": 41410
+    },
+    {
+     "texto": "It seemed like just another fight.",
+     "inicioMs": 49385
+    },
+    {
+     "texto": "It wasn't.",
+     "inicioMs": 52070
+    }
+   ]
+  },
+  {
+   "titulo": "The drive",
+   "audio": "08-the-drive.mp3",
+   "duracionMs": 52615,
+   "parrafos": [
+    {
+     "texto": "Later that night, Tupac got into a black BMW. Suge Knight was driving. They were heading to a nightclub Knight owned, Club 662, for a charity event, followed by a convoy of cars carrying friends and bodyguards.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "Tupac usually wore a bulletproof vest. That night, he wasn't wearing one.",
+     "inicioMs": 15222
+    },
+    {
+     "texto": "Around eleven o'clock, police on bicycles stopped the BMW. The music was too loud, and the car had no licence plates. The officers let them go.",
+     "inicioMs": 20101
+    },
+    {
+     "texto": "A few minutes later, at 11:15, the BMW stopped at a red light on East Flamingo Road, at the corner of Koval Lane.",
+     "inicioMs": 30168
+    },
+    {
+     "texto": "A white Cadillac pulled up on the right.",
+     "inicioMs": 38640
+    },
+    {
+     "texto": "Someone in the back seat raised a gun and fired through the window.",
+     "inicioMs": 41487
+    },
+    {
+     "texto": "Tupac was hit four times. Suge Knight was grazed by fragments.",
+     "inicioMs": 45601
+    },
+    {
+     "texto": "Then the Cadillac was gone.",
+     "inicioMs": 50563
+    }
+   ]
+  },
+  {
+   "titulo": "Six days",
+   "audio": "09-six-days.mp3",
+   "duracionMs": 64065,
+   "parrafos": [
+    {
+     "texto": "Knight drove away on a flat tyre until police stopped them. An ambulance took Tupac to University Medical Center.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "He spent six days in hospital. Doctors removed one of his lungs. He was kept in an induced coma.",
+     "inicioMs": 7984
+    },
+    {
+     "texto": "Friends and family kept watch. His mother, Afeni, flew to Las Vegas. Outside, fans held vigils in the desert heat.",
+     "inicioMs": 14687
+    },
+    {
+     "texto": "After six days, there was no hope of recovery. His mother made the decision every parent dreads.",
+     "inicioMs": 22718
+    },
+    {
+     "texto": "On September 13, 1996, at 4:03 in the afternoon, Tupac Shakur died. He was twenty-five years old.",
+     "inicioMs": 29139
+    },
+    {
+     "texto": "Before he lost consciousness, a police officer asked him who had shot him. According to the officer, Tupac refused to answer.",
+     "inicioMs": 37345
+    },
+    {
+     "texto": "Outside the hospital, fans gathered in silence. Across America, radio stations played his songs back to back. Newspapers that had called him dangerous now called him a voice of his generation.",
+     "inicioMs": 45365
+    },
+    {
+     "texto": "And inside the police department, an investigation began that almost nobody wanted to help.",
+     "inicioMs": 58365
+    }
+   ]
+  },
+  {
+   "titulo": "The silence",
+   "audio": "10-the-silence.mp3",
+   "duracionMs": 85045,
+   "parrafos": [
+    {
+     "texto": "Dozens of people had been in that convoy. Almost none of them would talk to police.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "One young man, Yaki Kadafi, a member of Tupac's group, had been in the car right behind. He refused to cooperate. Two months later, he was shot and killed in New Jersey, in an unrelated incident.",
+     "inicioMs": 5428
+    },
+    {
+     "texto": "Orlando Anderson, the man from the hotel fight, was arrested in a huge police sweep in Compton in October 1996. He was released without charges. He denied any involvement.",
+     "inicioMs": 17839
+    },
+    {
+     "texto": "Just days after the shooting, a wave of gang violence broke out in Compton. In a single week, there were a dozen shootings, and three people died. Police believed it was connected to what had happened in Las Vegas.",
+     "inicioMs": 30039
+    },
+    {
+     "texto": "Then, on March 9, 1997, The Notorious B.I.G. was shot and killed in Los Angeles. Another drive-by. Another case with no arrest. He was twenty-four.",
+     "inicioMs": 42969
+    },
+    {
+     "texto": "The two biggest rappers in America were dead within six months of each other. And neither case was moving.",
+     "inicioMs": 54329
+    },
+    {
+     "texto": "In May 1998, Orlando Anderson was killed in a shootout in Compton. Police said it had nothing to do with Tupac.",
+     "inicioMs": 60897
+    },
+    {
+     "texto": "Years later, newspaper investigations would accuse Las Vegas police of mishandling the case. Of not following up on the hotel fight. Of barely interviewing Anderson. The police department disputed that.",
+     "inicioMs": 68996
+    },
+    {
+     "texto": "Year after year, the Tupac case went cold.",
+     "inicioMs": 81924
+    }
+   ]
+  },
+  {
+   "titulo": "The man in the Cadillac",
+   "audio": "11-the-man-in-the-cadillac.mp3",
+   "duracionMs": 41925,
+   "parrafos": [
+    {
+     "texto": "But here's the thing.",
+     "inicioMs": 0
+    },
+    {
+     "texto": "The people who were in that white Cadillac knew exactly what had happened.",
+     "inicioMs": 2209
+    },
+    {
+     "texto": "And one of them was still alive.",
+     "inicioMs": 6878
+    },
+    {
+     "texto": "He was Orlando Anderson's uncle. A Southside Compton Crips leader named Duane Davis, known on the street as Keffe D.",
+     "inicioMs": 9269
+    },
+    {
+     "texto": "Years later, Keffe D would start talking about that night. In a secret meeting with detectives. In a television documentary. In a book he wrote himself.",
+     "inicioMs": 17097
+    },
+    {
+     "texto": "He described the Cadillac. The seats. The gun.",
+     "inicioMs": 26402
+    },
+    {
+     "texto": "And still, for years, nobody arrested him.",
+     "inicioMs": 30007
+    },
+    {
+     "texto": "How is that possible?",
+     "inicioMs": 33436
+    },
+    {
+     "texto": "And what happened when Las Vegas police finally knocked on the door?",
+     "inicioMs": 35643
+    },
+    {
+     "texto": "That's in Part 2.",
+     "inicioMs": 40176
+    }
+   ]
+  }
+ ]
+}
