@@ -1,0 +1,38 @@
+# Narra los Shorts de un proyecto (produccion/<carpeta>/proyecto.json), prepara los mp3 y calcula los tiempos de cada palabra.
+name: Narrar serie
+
+on:
+  workflow_dispatch:
+    inputs:
+      carpeta:
+        required: true
+
+jobs:
+  narrar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: herramientas/package-lock.json
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: npm ci
+        working-directory: herramientas
+      - run: node herramientas/narrar.mjs "produccion/${{ inputs.carpeta }}"
+      - run: node herramientas/episodio.mjs "produccion/${{ inputs.carpeta }}"
+      - name: Tiempos de cada palabra
+        run: |
+          d=animacion/public/episodios/${{ inputs.carpeta }}
+          n=$(node -e "console.log(require('./$d/shorts.json').shorts.length)")
+          for k in $(seq 1 $n); do
+            ini=$(node -e "console.log(require('./$d/shorts.json').shorts[$k-1].parrafos.map(p=>p.inicioMs).join(','))")
+            node herramientas/tiempos.mjs $d/short-$k.mp3 $d/short-$k.txt $d/short-$k-palabras.json $ini
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: narracion
+          path: animacion/public/episodios/${{ inputs.carpeta }}
+          retention-days: 3
