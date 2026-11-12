@@ -81,7 +81,52 @@ const Subtitulos: React.FC<{ palabras: Palabra[]; claves: string[] }> = ({ palab
   );
 };
 
-export const VerticalCrimen: React.FC<{ datos: DatosShort; palabras: Palabra[]; plan: (Escena | Escena[])[]; titulo: string; claves: string[]; parte: number; caso?: string }> = ({ datos, palabras, plan, titulo, claves, parte, caso = "03" }) => {
+// Modo serie (formato de historias por partes): titulo gigante al empezar, reloj del caso, medidor de tension
+// con linea de electrocardiograma que se acelera y aviso de la parte siguiente al final.
+export type Serie = { caso: string; parte: number; total: number; reloj: string; titular: string; siguiente?: string };
+
+const Electro: React.FC<{ t: number }> = ({ t }) => {
+  const f = useCurrentFrame();
+  const vel = 3 + t * 9;
+  const periodo = 60 - t * 34;
+  const puntos = Array.from({ length: 60 }, (_, i) => {
+    const x = i * 6;
+    const fase = (i * 6 + f * vel) % periodo;
+    const y = fase < 4 ? -4 : fase < 7 ? 26 : fase < 10 ? -30 : fase < 13 ? 10 : 0;
+    return `${i ? 'L' : 'M'}${x},${40 + y}`;
+  }).join(' ');
+  return <svg width={360} height={80}><path d={puntos} fill="none" stroke={crimen.rojo} strokeWidth={5} strokeLinejoin="round" /></svg>;
+};
+
+const PanelSerie: React.FC<{ serie: Serie; total: number }> = ({ serie, total }) => {
+  const f = useCurrentFrame();
+  const t = Math.min(1, f / total);
+  const parpadeo = Math.floor(f / 15) % 2 === 0;
+  return (
+    <div style={{ position: 'absolute', left: 40, right: 40, top: 432, height: 110, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{ fontFamily: letra.maquina, fontSize: 40, color: crimen.hueso, background: 'rgba(10,10,13,0.75)', border: `3px solid ${crimen.hueso}`, padding: '8px 18px' }}>
+        <span style={{ color: crimen.rojo, opacity: parpadeo ? 1 : 0.3 }}>● </span>{serie.reloj}
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: 'rgba(10,10,13,0.75)', padding: '0 14px', border: `3px solid ${crimen.rojo}` }}>
+        <div style={{ fontFamily: letra.titulo, fontSize: 34, letterSpacing: 3, color: crimen.rojo }}>TENSION</div>
+        <div style={{ width: 200, overflow: 'hidden' }}><Electro t={t} /></div>
+      </div>
+    </div>
+  );
+};
+
+const Titular: React.FC<{ texto: string }> = ({ texto }) => {
+  const f = useCurrentFrame();
+  const o = interpolate(f, [0, 2, 34, 46], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const s = interpolate(f, [0, 8], [1.35, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  return (
+    <div style={{ position: 'absolute', left: 0, right: 0, top: 560, height: 608, display: 'flex', alignItems: 'center', justifyContent: 'center', background: `rgba(10,10,13,${0.72 * o})`, opacity: o }}>
+      <div style={{ fontFamily: letra.titulo, fontSize: 190, lineHeight: 0.95, color: crimen.hueso, textAlign: 'center', padding: '0 40px', transform: `scale(${s})`, textShadow: `0 0 40px ${crimen.rojo}` }}>{texto}</div>
+    </div>
+  );
+};
+
+export const VerticalCrimen: React.FC<{ datos: DatosShort; palabras: Palabra[]; plan: (Escena | Escena[])[]; titulo: string; claves: string[]; parte: number; caso?: string; serie?: Serie }> = ({ datos, palabras, plan, titulo, claves, parte, caso = "03", serie }) => {
   const f = useCurrentFrame();
   const total = duracionShortCrimen(datos);
   if (plan.length !== datos.parrafos.length) throw new Error(`${datos.audio}: ${datos.parrafos.length} parrafos y ${plan.length} escenas`);
@@ -108,13 +153,15 @@ export const VerticalCrimen: React.FC<{ datos: DatosShort; palabras: Palabra[]; 
       <AbsoluteFill style={{ alignItems: 'center', paddingTop: 120, textAlign: 'center' }}>
         <div style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
           <div style={{ fontFamily: letra.titulo, fontSize: 42, letterSpacing: 10, color: crimen.hueso }}>VANISHED FILES</div>
-          <div style={{ fontFamily: letra.titulo, fontSize: 34, letterSpacing: 4, color: crimen.rojo, border: `4px solid ${crimen.rojo}`, padding: '0 14px', transform: `rotate(-4deg) scale(${sello})` }}>CASE {caso} · PART {parte}</div>
+          <div style={{ fontFamily: letra.titulo, fontSize: 34, letterSpacing: 4, color: crimen.rojo, border: `4px solid ${crimen.rojo}`, padding: '0 14px', transform: `rotate(-4deg) scale(${sello})` }}>{serie ? `${serie.caso} · PART ${serie.parte} OF ${serie.total}` : `CASE ${caso} · PART ${parte}`}</div>
         </div>
         <div style={{ fontFamily: letra.titulo, fontSize: 92, lineHeight: 1, color: crimen.hueso, marginTop: 26, padding: '0 70px', textShadow: '0 6px 24px rgba(0,0,0,0.8)' }}>{titulo}</div>
       </AbsoluteFill>
+      {serie && <PanelSerie serie={serie} total={total} />}
+      {serie && <Titular texto={serie.titular} />}
       <Subtitulos palabras={palabras} claves={claves} />
       <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 200, opacity: cta }}>
-        <div style={{ fontFamily: letra.titulo, fontSize: 56, letterSpacing: 4, color: crimen.hueso, background: crimen.rojo, padding: '14px 40px', transform: `scale(${0.9 + cta * 0.1})` }}>▶ FULL EPISODE ON YOUTUBE</div>
+        <div style={{ fontFamily: letra.titulo, fontSize: 56, letterSpacing: 4, color: crimen.hueso, background: crimen.rojo, padding: '14px 40px', transform: `scale(${0.9 + cta * 0.1})` }}>{serie?.siguiente ? `▶ NEXT: ${serie.siguiente}` : '▶ FULL EPISODE ON YOUTUBE'}</div>
       </AbsoluteFill>
       <div style={{ position: 'absolute', left: 0, bottom: 0, height: 12, width: `${(f / total) * 100}%`, background: crimen.rojo }} />
     </AbsoluteFill>
