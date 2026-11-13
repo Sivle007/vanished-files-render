@@ -144,7 +144,7 @@ export const ComposicionesSerieTupac: React.FC = () => (
         <Composition
           key={i}
           id={`Serie-T${i + 1}`}
-          component={() => <VerticalCrimen datos={datos} palabras={s.palabras} plan={s.plan} titulo={s.serie.titular} claves={s.claves} parte={s.serie.parte} serie={s.serie} />}
+          component={() => <VerticalCrimen datos={datos} palabras={s.palabras} plan={s.plan} titulo={s.serie.titular} claves={s.claves} parte={s.serie.parte} serie={s.serie} completo />}
           width={1080}
           height={1920}
           fps={FPS}

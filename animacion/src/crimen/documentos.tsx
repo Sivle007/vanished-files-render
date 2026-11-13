@@ -1,10 +1,10 @@
 // Planos de "expediente": titulos, documentos, recortes, notas, contadores, cinta, velas, balanza, tablero y cronologia.
-import React from 'react';
+import React, { useContext } from 'react';
 import { AbsoluteFill, interpolate, random, useCurrentFrame } from 'remotion';
 import { loadFont as cargarMano } from '@remotion/google-fonts/Caveat';
 import { crimen, letra } from '../MarcaCrimen';
 import { TINTA } from '../Personaje';
-import { Acabado, Camara, ConDuracion, H, Mov, Polvo, Svg, W, ap, fijo, lineal } from './base';
+import { ANCHO_VERTICAL, Acabado, Camara, ConDuracion, H, ModoVertical, Mov, Polvo, Svg, W, ap, fijo, lineal } from './base';
 
 const mano = cargarMano('normal', { weights: ['700'], subsets: ['latin'] }).fontFamily;
 
@@ -49,13 +49,14 @@ export const Rotulo: React.FC<ConDuracion & { texto: string; sub?: string; sello
   const f = useCurrentFrame();
   const o = ap(f, 2, 14);
   const letras = Math.floor(lineal(f, 10, 10 + (sub?.length ?? 0) * 1.3) * (sub?.length ?? 0));
+  const v = useContext(ModoVertical);
   const contenido = (
     <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-      <div style={{ opacity: o, transform: `scale(${1.08 - o * 0.08})` }}>
-        <div style={{ fontFamily: letra.titulo, fontSize: 150, letterSpacing: 8, lineHeight: 1, color: fondo === 'negro' ? crimen.hueso : TINTA }}>{texto}</div>
-        {sub && <div style={{ fontFamily: letra.maquina, fontSize: 40, marginTop: 18, color: fondo === 'negro' ? crimen.rojo : '#7A2A22' }}>{sub.slice(0, letras)}</div>}
+      <div style={{ opacity: o, transform: `scale(${1.08 - o * 0.08})`, maxWidth: v ? ANCHO_VERTICAL : undefined }}>
+        <div style={{ fontFamily: letra.titulo, fontSize: v ? 120 : 150, letterSpacing: v ? 3 : 8, lineHeight: 1, color: fondo === 'negro' ? crimen.hueso : TINTA }}>{texto}</div>
+        {sub && <div style={{ fontFamily: letra.maquina, fontSize: v ? 34 : 40, marginTop: 18, color: fondo === 'negro' ? crimen.rojo : '#7A2A22' }}>{sub.slice(0, letras)}</div>}
       </div>
-      {sello && <SelloGoma texto={sello} desde={Math.round(duracion * 0.35)} x={1400} y={300} />}
+      {sello && <SelloGoma texto={sello} desde={Math.round(duracion * 0.35)} x={v ? 960 : 1400} y={v ? 230 : 300} tam={v ? 48 : 64} />}
     </AbsoluteFill>
   );
   return fondo === 'papel' ? (
@@ -145,13 +146,14 @@ export const Nota: React.FC<ConDuracion & { texto: string; tipo?: 'mano' | 'maqu
 export const Pregunta: React.FC<ConDuracion & { texto: string; sub?: string }> = ({ duracion, texto, sub }) => {
   const f = useCurrentFrame();
   const o = ap(f, 4, 16);
+  const v = useContext(ModoVertical);
   return (
     <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 50%, #241417, ${crimen.negro} 70%)`, justifyContent: 'center', alignItems: 'center' }}>
       <Camara duracion={duracion} mov={{ zoom: [1, 1.08] }}>
         <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center' }}>
           <div style={{ position: 'absolute', fontFamily: letra.titulo, fontSize: 900, color: crimen.rojo, opacity: 0.16 * o, transform: `rotate(${-6 + o * 6}deg)` }}>?</div>
-          <div style={{ fontFamily: letra.titulo, fontSize: 120, letterSpacing: 4, color: crimen.hueso, opacity: o, textAlign: 'center', padding: '0 160px', lineHeight: 1.05 }}>{texto}</div>
-          {sub && <div style={{ fontFamily: letra.maquina, fontSize: 34, color: crimen.rojo, marginTop: 180, opacity: ap(f, 16, 26) }}>{sub}</div>}
+          <div style={{ fontFamily: letra.titulo, fontSize: v ? 100 : 120, letterSpacing: v ? 2 : 4, color: crimen.hueso, opacity: o, textAlign: 'center', padding: v ? 0 : '0 160px', maxWidth: v ? ANCHO_VERTICAL : undefined, lineHeight: 1.05 }}>{texto}</div>
+          {sub && <div style={{ fontFamily: letra.maquina, fontSize: v ? 30 : 34, color: crimen.rojo, marginTop: v ? 40 : 180, opacity: ap(f, 16, 26), maxWidth: v ? ANCHO_VERTICAL : undefined, textAlign: 'center' }}>{sub}</div>}
         </AbsoluteFill>
       </Camara>
       <Acabado />
@@ -164,11 +166,12 @@ export const Giro: React.FC<ConDuracion & { texto: string }> = ({ duracion, text
   const f = useCurrentFrame();
   const flash = interpolate(f, [0, 3, 10], [0.9, 0.4, 0], fijo);
   const temblor = f < 12 ? (random(`g${f}`) - 0.5) * 14 : 0;
+  const v = useContext(ModoVertical);
   return (
     <AbsoluteFill style={{ background: crimen.negro, justifyContent: 'center', alignItems: 'center' }}>
       <Camara duracion={duracion} mov={{ zoom: [1.1, 1] }}>
         <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', transform: `translateX(${temblor}px)` }}>
-          <div style={{ fontFamily: letra.titulo, fontSize: 140, color: crimen.hueso, letterSpacing: 6, textShadow: `6px 0 0 ${crimen.rojo}` }}>{texto}</div>
+          <div style={{ fontFamily: letra.titulo, fontSize: v ? 120 : 140, lineHeight: 1, textAlign: 'center', maxWidth: v ? ANCHO_VERTICAL : undefined, color: crimen.hueso, letterSpacing: v ? 3 : 6, textShadow: `6px 0 0 ${crimen.rojo}` }}>{texto}</div>
         </AbsoluteFill>
       </Camara>
       <AbsoluteFill style={{ background: crimen.rojo, opacity: flash }} />
@@ -183,10 +186,11 @@ export const Contador: React.FC<ConDuracion & { pasos: number[]; etiqueta: strin
   const tramo = (duracion * 0.75) / Math.max(1, pasos.length - 1);
   const i = Math.min(pasos.length - 1, Math.floor(Math.max(0, f - 10) / tramo));
   const golpe = interpolate((f - 10) % tramo, [0, 6], [1.15, 1], fijo);
+  const v = useContext(ModoVertical);
   return (
     <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 45%, #1E1A1E, ${crimen.negro} 70%)`, justifyContent: 'center', alignItems: 'center' }}>
       <div style={{ fontFamily: letra.titulo, fontSize: 380, color, lineHeight: 0.9, transform: `scale(${golpe})` }}>{prefijo}{pasos[i]}</div>
-      <div style={{ fontFamily: letra.maquina, fontSize: 44, color: crimen.hueso, marginTop: 20, opacity: ap(f, 6, 16) }}>{etiqueta}</div>
+      <div style={{ fontFamily: letra.maquina, fontSize: v ? 36 : 44, color: crimen.hueso, marginTop: 20, opacity: ap(f, 6, 16), maxWidth: v ? ANCHO_VERTICAL : undefined, textAlign: 'center' }}>{etiqueta}</div>
       <Acabado />
     </AbsoluteFill>
   );

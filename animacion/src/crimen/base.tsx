@@ -1,6 +1,6 @@
 // Piezas comunes del estilo true crime: lienzo, camara, atmosfera (niebla, lluvia, polvo, grano, vineta, sirena)
 // y utilidades de tiempo. Todo se dibuja en un lienzo de 1920x1080.
-import React from 'react';
+import React, { createContext, useContext } from 'react';
 import { AbsoluteFill, Easing, interpolate, random, staticFile, useCurrentFrame } from 'remotion';
 import { crimen, letra } from '../MarcaCrimen';
 
@@ -116,16 +116,21 @@ export const Sirena: React.FC<{ intensidad?: number }> = ({ intensidad = 0.35 })
 };
 
 // Texto de pantalla: titulo en Bebas con subtitulo de maquina de escribir.
+// En los Shorts a pantalla completa solo se ve el centro de la escena (x 622-1298): los textos se estrechan.
+export const ModoVertical = createContext(false);
+export const ANCHO_VERTICAL = 620;
+
 export const TextoPantalla: React.FC<{ texto: string; sub?: string; desde?: number; pos?: 'abajo' | 'arriba' | 'centro'; color?: string }> = ({ texto, sub, desde = 8, pos = 'abajo', color = crimen.hueso }) => {
   const f = useCurrentFrame();
   const o = ap(f, desde, desde + 10);
   const letras = Math.floor(lineal(f, desde + 6, desde + 6 + (sub?.length ?? 0) * 1.2) * (sub?.length ?? 0));
-  const estilo: React.CSSProperties = pos === 'centro' ? { justifyContent: 'center' } : pos === 'arriba' ? { justifyContent: 'flex-start', paddingTop: 70 } : { justifyContent: 'flex-end', paddingBottom: 70 };
+  const v = useContext(ModoVertical);
+  const estilo: React.CSSProperties = pos === 'centro' ? { justifyContent: 'center' } : pos === 'arriba' ? { justifyContent: 'flex-start', paddingTop: v ? 120 : 70 } : { justifyContent: 'flex-end', paddingBottom: v ? 300 : 70 };
   return (
     <AbsoluteFill style={{ alignItems: 'center', ...estilo }}>
-      <div style={{ opacity: o, transform: `translateY(${(1 - o) * 14}px)`, textAlign: 'center' }}>
-        <div style={{ display: 'inline-block', fontFamily: letra.titulo, fontSize: 74, letterSpacing: 4, color, background: 'rgba(10,10,13,0.72)', padding: '6px 26px', borderLeft: `6px solid ${crimen.rojo}` }}>{texto}</div>
-        {sub && <div style={{ fontFamily: letra.maquina, fontSize: 30, color: crimen.hueso, marginTop: 10, textShadow: '0 2px 8px #000' }}>{sub.slice(0, letras)}</div>}
+      <div style={{ opacity: o, transform: `translateY(${(1 - o) * 14}px)`, textAlign: 'center', maxWidth: v ? ANCHO_VERTICAL : undefined }}>
+        <div style={{ display: 'inline-block', fontFamily: letra.titulo, fontSize: v ? 60 : 74, lineHeight: 1.05, letterSpacing: v ? 2 : 4, color, background: 'rgba(10,10,13,0.72)', padding: '6px 26px', borderLeft: `6px solid ${crimen.rojo}` }}>{texto}</div>
+        {sub && <div style={{ fontFamily: letra.maquina, fontSize: v ? 28 : 30, color: crimen.hueso, marginTop: 10, textShadow: '0 2px 8px #000' }}>{sub.slice(0, letras)}</div>}
       </div>
     </AbsoluteFill>
   );
