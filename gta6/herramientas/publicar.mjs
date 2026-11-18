@@ -94,7 +94,7 @@ for (const id of Object.keys(INFO)) {
   md += `**Título**\n\`\`\`\n${guion.titulo}\n\`\`\`\n\n**Descripción**\n\`\`\`\n${info.resumen}\n\n💬 ${info.pregunta} Te leo en los comentarios.\n\n`;
   md += `⏱️ Capítulos\n${tiempos ? caps.join('\n') : '(faltan tiempos)'}\n\n`;
   md += `🔔 Suscríbete a Mapa Neón para todas las guías de GTA 6 en español.\n\n`;
-  md += `ℹ️ Canal no oficial, sin relación con Rockstar Games ni Take-Two. Animaciones y música originales; los personajes se muestran como siluetas. La información refleja lo publicado antes del lanzamiento: lo no confirmado se indica como rumor o estimación. Voz sintética (IA).\n\n#GTA6 #GTAVI #Leonida\n\`\`\`\n\n`;
+  md += `ℹ️ Canal no oficial, sin relación con Rockstar Games ni Take-Two. Animaciones, música e ilustraciones de personajes originales del canal (fan art, no arte oficial). La información refleja lo publicado antes del lanzamiento: lo no confirmado se indica como rumor o estimación. Voz sintética (IA).\n\n#GTA6 #GTAVI #Leonida\n\`\`\`\n\n`;
   md += `**Etiquetas**\n\`\`\`\n${info.etiquetas.join(', ')}\n\`\`\`\n\n`;
 }
 writeFileSync(join(raiz, 'salida', 'PUBLICAR.md'), md);

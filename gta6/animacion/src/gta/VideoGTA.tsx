@@ -13,14 +13,16 @@ import v07 from '../../../videos/07-online.json';
 import v08 from '../../../videos/08-vice-city.json';
 import v09 from '../../../videos/09-espera.json';
 import v10 from '../../../videos/10-records.json';
+import v11 from '../../../videos/11-confirmado.json';
+import { Acc, Expr, Presentador } from './Presentadores';
 
-type Segmento = { voz: string; capitulo?: string; escena: Escena & { fondo?: Fondo } };
-type Guion = { titulo: string; segmentos: Segmento[] };
+type Segmento = { voz: string; capitulo?: string; escena: Escena & { fondo?: Fondo }; habla?: 'L' | 'M' | 'N'; exprL?: Expr; exprM?: Expr; accL?: Acc; accM?: Acc };
+type Guion = { titulo: string; presentadores?: boolean; segmentos: Segmento[] };
 
 export const GUIONES: Record<string, Guion> = {
   '01-hora': v01 as Guion, '02-ediciones': v02 as Guion, '03-espacio': v03 as Guion, '04-pc': v04 as Guion,
   '05-mapa': v05 as Guion, '06-historia': v06 as Guion, '07-online': v07 as Guion, '08-vice-city': v08 as Guion,
-  '09-espera': v09 as Guion, '10-records': v10 as Guion,
+  '09-espera': v09 as Guion, '10-records': v10 as Guion, '11-confirmado': v11 as Guion,
 };
 
 const COLA = 2 * FPS; // 2 s extra al final con la última escena
@@ -38,6 +40,31 @@ const Marca: React.FC = () => (
   </div>
 );
 
+// Contenido reducido en el centro y Leo (izquierda) y Marisol (derecha) a los lados; en "plato", los dos en grande.
+export const ConPresentadores: React.FC<{ s: Segmento; dur: number }> = ({ s, dur }) => {
+  const plato = s.escena.tipo === 'plato';
+  const alto = plato ? 820 : 700;
+  const host = (quien: 'leo' | 'marisol') => {
+    const habla = s.habla === (quien === 'leo' ? 'L' : 'M');
+    const otro = s.habla && s.habla !== 'N' && !habla;
+    const lado = quien === 'leo' ? { left: plato ? 330 : -40 } : { right: plato ? 330 : -40 };
+    return (
+      <div style={{ position: 'absolute', bottom: plato ? -60 : -130, ...lado, transform: `scale(${otro ? 0.95 : 1})`, transformOrigin: 'bottom center', opacity: otro ? 0.9 : 1, filter: habla ? 'drop-shadow(0 0 18px #ff2e8899)' : 'none' }}>
+        <Presentador quien={quien} expr={(quien === 'leo' ? s.exprL : s.exprM) ?? 'normal'} habla={habla} acc={quien === 'leo' ? s.accL : s.accM} alto={alto} />
+      </div>
+    );
+  };
+  return (
+    <AbsoluteFill>
+      {plato ? <EscenaGTA e={s.escena} duracion={dur} /> : (
+        <AbsoluteFill style={{ transform: 'scale(0.76) translateY(-70px)' }}><EscenaGTA e={s.escena} duracion={dur} /></AbsoluteFill>
+      )}
+      {host('leo')}
+      {host('marisol')}
+    </AbsoluteFill>
+  );
+};
+
 export const VideoGTA: React.FC<Props> = ({ id, tiempos }) => {
   const guion = GUIONES[id];
   let desde = 0;
@@ -50,7 +77,7 @@ export const VideoGTA: React.FC<Props> = ({ id, tiempos }) => {
         const el = (
           <Sequence key={i} from={desde} durationInFrames={dur} name={`${i} ${s.escena.tipo}`}>
             <FondoGTA tipo={s.escena.fondo ?? 'noche'} />
-            <EscenaGTA e={s.escena} duracion={dur} />
+            {guion.presentadores ? <ConPresentadores s={s} dur={dur} /> : <EscenaGTA e={s.escena} duracion={dur} />}
             <Transicion />
             <Audio src={staticFile(`gta/${id}/${String(i).padStart(2, '0')}.wav`)} />
           </Sequence>

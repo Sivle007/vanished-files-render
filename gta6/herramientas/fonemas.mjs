@@ -29,7 +29,7 @@ export const PRONUNCIA = {
   'mapa neón': 'mápa neón', 'bully': 'búli', 'max': 'máks', 'payne': 'péin', 'l.a.': 'él éi', 'noire': 'nuár',
   'heist': 'jáist', 'heists': 'jáists', 'killer': 'kíler', 'crypto': 'crípto', 'sale': 'sále', 'hd': 'áche dé',
   'ram': 'rám', 'gpu': 'yí pi iú', 'cpu': 'sí pi iú', 'nvidia': 'envídia', 'amd': 'á éme dé', 'gamer': 'guéimer',
-  'gamers': 'guéimers', 'ready': 'rédi', 'flow': 'flóu', 'boxed': 'bóksd', 'mini': 'míni',
+  'gamers': 'guéimers', 'v': 'cínco', 's': 'ése', 'bae-luxe': 'béi lúks', 'roxy': 'róksi', 'only': 'ónli', 'raw': 'ró', 'records': 'récords', 'dre': 'dré', 'quan': 'kuán', 'hampton': 'jámpton', 'heder': 'jéder', 'boobie': 'búbi', 'ike': 'áik', 'gamesbeat': 'guéimsbit', 'dwnply': 'dáunplei', 'ready': 'rédi', 'flow': 'flóu', 'boxed': 'bóksd', 'mini': 'míni',
 };
 
 const UNIDADES = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez',

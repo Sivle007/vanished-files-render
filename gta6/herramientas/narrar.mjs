@@ -62,14 +62,16 @@ for (const id of ids) {
     const nombre = String(s).padStart(2, '0');
     const wav = join(destino, `${nombre}.wav`);
     const firma = join(destino, `${nombre}.txt`);
-    const clave = `${voz}\n${VELOCIDAD}\n${seg.voz}`;
+    // Vídeos con presentadores: cada segmento usa la voz de quien habla (L Leo, M Marisol, N narrador).
+    const vozSeg = { L: 'em_alex', M: 'ef_dora', N: 'em_santa' }[seg.habla] ?? voz;
+    const clave = `${vozSeg}\n${VELOCIDAD}\n${seg.voz}`;
     if (!(existsSync(wav) && existsSync(firma) && readFileSync(firma, 'utf8') === clave)) {
       tts ??= await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX', { dtype: 'q8', device: 'cpu' });
       const inicio = Date.now();
       const partes = [];
       for (const t of trozos(seg.voz)) {
         const { input_ids } = tts.tokenizer(t, { truncation: true });
-        const audio = await tts.generate_from_ids(input_ids, { voice: voz, speed: VELOCIDAD });
+        const audio = await tts.generate_from_ids(input_ids, { voice: vozSeg, speed: VELOCIDAD });
         partes.push(audio.audio, new Float32Array(Math.round(0.12 * MUESTREO)));
       }
       partes.push(new Float32Array(Math.round(COLA * MUESTREO)));

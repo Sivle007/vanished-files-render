@@ -2,6 +2,7 @@ import React from 'react';
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 import { C, FUENTE_MARCA, FUENTE_TEXTO, FUENTE_TITULO, neon } from './estilo';
 import { Ficha, RepartoEscena } from './Reparto';
+import { ClaveEtiqueta, Etiquetas, EsquemaEscena, FichaEscena, FichasEscena, MarcadorEscena, PlatoEscena, Veredicto } from './Escenas11';
 
 // ---------- Tipos de escena (lo que escriben los guiones en GTa6/videos/*.json) ----------
 type Lado = { titulo: string; precio?: string; items: string[] };
@@ -22,7 +23,14 @@ export type Escena =
   | { tipo: 'alerta'; texto: string; sub: string }
   | { tipo: 'flecha'; de: string; a: string; etiqueta: string }
   | { tipo: 'cierre'; texto: string }
-  | { tipo: 'reparto'; titulo: string; personajes: Ficha[] };
+  | { tipo: 'reparto'; titulo: string; personajes: Ficha[] }
+  | { tipo: 'plato'; titulo: string }
+  | { tipo: 'etiquetas'; desde?: number; hasta?: number; activa?: ClaveEtiqueta }
+  | { tipo: 'veredicto'; afirmacion: string; etiqueta: ClaveEtiqueta | 'pendiente'; detalle?: string; fuente?: string; icono?: string }
+  | { tipo: 'ficha'; nombre: string; lineas: string[]; etiqueta: ClaveEtiqueta; fuente?: string }
+  | { tipo: 'fichas'; titulo: string; items: { nombre: string; rasgo: string }[]; progresivo?: boolean }
+  | { tipo: 'esquema'; nota?: string }
+  | { tipo: 'marcador'; filas: { texto: string; etiqueta: ClaveEtiqueta }[]; revelar: 'nada' | 'progresivo' | 'todo'; puntos?: string };
 
 // ---------- Ayudas de animación ----------
 const useEntrada = (retraso = 0, rigidez = 120) => {
@@ -616,5 +624,12 @@ export const EscenaGTA: React.FC<{ e: Escena; duracion: number }> = ({ e, duraci
     case 'flecha': return <Flecha e={e} />;
     case 'cierre': return <Cierre e={e} />;
     case 'reparto': return <RepartoEscena titulo={e.titulo} personajes={e.personajes} duracion={duracion} />;
+    case 'plato': return <PlatoEscena titulo={e.titulo} />;
+    case 'etiquetas': return <Etiquetas desde={e.desde} hasta={e.hasta} activa={e.activa} duracion={duracion} />;
+    case 'veredicto': return <Veredicto afirmacion={e.afirmacion} etiqueta={e.etiqueta} detalle={e.detalle} fuente={e.fuente} icono={e.icono} />;
+    case 'ficha': return <FichaEscena nombre={e.nombre} lineas={e.lineas} etiqueta={e.etiqueta} fuente={e.fuente} duracion={duracion} />;
+    case 'fichas': return <FichasEscena titulo={e.titulo} items={e.items} progresivo={e.progresivo} duracion={duracion} />;
+    case 'esquema': return <EsquemaEscena nota={e.nota} duracion={duracion} />;
+    case 'marcador': return <MarcadorEscena filas={e.filas} revelar={e.revelar} puntos={e.puntos} duracion={duracion} />;
   }
 };
