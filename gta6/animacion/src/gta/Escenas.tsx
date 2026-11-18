@@ -242,25 +242,42 @@ const Almacen: React.FC<{ e: Extract<Escena, { tipo: 'almacen' }>; duracion: num
   );
 };
 
-// Mapa ilustrado y APROXIMADO de un estado ficticio tipo Florida (dibujo propio).
+// Mapa ilustrado y APROXIMADO de Leonida, redibujado a mano en el estilo del canal tomando como guía
+// la reconstrucción hecha por fans a partir de los tráileres. No es el mapa oficial.
+// Coordenadas tomadas sobre la referencia (472x642) y pasadas al lienzo del mapa (1100x1040).
+const P = (x: number, y: number) => [167 + x * 1.62, y * 1.62] as const;
+const trazo = (pts: number[][]) => {
+  const q = pts.map(([x, y]) => P(x, y));
+  // Curva suave que pasa por el punto medio de cada lado.
+  const m = (a: readonly number[], b: readonly number[]) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+  let d = `M ${m(q[q.length - 1], q[0]).join(' ')}`;
+  q.forEach((p, i) => { d += ` Q ${p.join(' ')} ${m(p, q[(i + 1) % q.length]).join(' ')}`; });
+  return d + ' Z';
+};
+const COSTA = trazo([[215, 12], [245, 18], [275, 40], [305, 70], [335, 105], [360, 140], [380, 180], [395, 215], [410, 250], [418, 290], [420, 330], [415, 370], [405, 410], [385, 445], [360, 475], [330, 500], [305, 525], [285, 548], [265, 562], [245, 548], [225, 520], [205, 495], [185, 465], [168, 430], [150, 395], [128, 362], [110, 328], [98, 296], [90, 262], [86, 225], [90, 185], [103, 140], [123, 95], [150, 58], [180, 28]]);
+const BARRERA = trazo([[430, 232], [440, 236], [452, 300], [452, 360], [446, 412], [436, 410], [440, 350], [438, 290]]);
+const CAYO_GRANDE = trazo([[66, 578], [100, 556], [160, 560], [212, 578], [208, 606], [150, 624], [88, 616]]);
+const ISLAS: [number, number, number, number][] = [[60, 190, 9, 20], [44, 252, 7, 22], [78, 128, 10, 14], [118, 62, 12, 9], [232, 574, 10, 6], [254, 566, 9, 5], [274, 556, 8, 5], [292, 548, 7, 4], [470 - 20, 455, 6, 10]];
+const LAGOS: [number, number, number, number][] = [[330, 165, 26, 30], [210, 372, 22, 12]];
+
 export const ZONAS: Record<string, { nombre: string; x: number; y: number; color: string }> = {
-  kalaga: { nombre: 'Mount Kalaga', x: 610, y: 170, color: C.verde },
-  port: { nombre: 'Port Gellhorn', x: 300, y: 250, color: C.naranja },
-  ambrosia: { nombre: 'Ambrosia', x: 690, y: 420, color: C.amarillo },
-  grass: { nombre: 'Grassrivers', x: 720, y: 640, color: '#7dffb0' },
-  vice: { nombre: 'Vice City', x: 880, y: 700, color: C.rosa },
-  keys: { nombre: 'Leonida Keys', x: 640, y: 905, color: C.cian },
+  kalaga: { nombre: 'Mount Kalaga', x: P(250, 92)[0], y: P(250, 92)[1], color: C.verde },
+  ambrosia: { nombre: 'Ambrosia', x: P(318, 200)[0], y: P(318, 200)[1], color: C.amarillo },
+  port: { nombre: 'Port Gellhorn', x: P(118, 285)[0], y: P(118, 285)[1], color: C.naranja },
+  grass: { nombre: 'Grassrivers', x: P(250, 318)[0], y: P(250, 318)[1], color: '#7dffb0' },
+  vice: { nombre: 'Vice City', x: P(365, 335)[0], y: P(365, 335)[1], color: C.rosa },
+  keys: { nombre: 'Leonida Keys', x: P(150, 588)[0], y: P(150, 588)[1], color: C.cian },
 };
 
-export const MapaLeonida: React.FC<{ foco: string | null; escala?: number }> = ({ foco, escala = 1 }) => {
-  const f = useCurrentFrame();
+export const MapaLeonida: React.FC<{ foco: string | null; escala?: number; fijo?: boolean }> = ({ foco, escala = 1, fijo }) => {
+  const actual = useCurrentFrame();
+  const f = fijo ? 900 : actual;
   const dibujo = interpolate(f, [0, 40], [0, 1], { extrapolateRight: 'clamp' });
   const z = foco ? ZONAS[foco] : null;
   const zoomS = spring({ frame: f - 8, fps: 30, config: { damping: 18 } });
-  const zoom = z ? 1 + zoomS * 0.45 : 1;
-  const tx = z ? (550 - z.x) * zoomS * 0.45 : 0;
-  const ty = z ? (520 - z.y) * zoomS * 0.45 : 0;
-  const costa = 'M120 120 L 560 100 L 820 110 L 900 150 L 930 260 L 960 380 L 990 520 L 1000 640 L 975 760 L 930 830 L 870 860 L 800 850 L 740 800 L 690 720 L 640 620 L 600 520 L 560 430 L 510 360 L 440 320 L 360 300 L 250 300 L 150 290 L 90 250 Z';
+  const zoom = z ? 1 + zoomS * 0.5 : 1;
+  const tx = z ? (550 - z.x) * zoomS * 0.5 : 0;
+  const ty = z ? (520 - z.y) * zoomS * 0.5 : 0;
   return (
     <svg width={1000 * escala} height={1040 * escala} viewBox="0 0 1100 1040" style={{ overflow: 'hidden', borderRadius: 30, border: `3px solid ${C.cian}55` }}>
       <defs>
@@ -271,12 +288,17 @@ export const MapaLeonida: React.FC<{ foco: string | null; escala?: number }> = (
       <rect width={1100} height={1040} fill="#0a0626" />
       <rect width={1100} height={1040} fill="url(#olas)" />
       <g transform={`translate(${550 + tx} ${520 + ty}) scale(${zoom}) translate(-550 -520)`}>
-        <path d={costa} fill="#1c1048" stroke={C.cian} strokeWidth={5} strokeDasharray={4000} strokeDashoffset={4000 * (1 - dibujo)} />
-        <ellipse cx={700} cy={470} rx={70} ry={50} fill="#13306a" stroke={C.cian} strokeWidth={2} opacity={0.8} />
-        {[[860, 880, 30], [800, 905, 26], [735, 925, 24], [670, 935, 22], [600, 940, 20], [535, 935, 16]].map(([x, y, r], i) => (
-          <ellipse key={i} cx={x} cy={y} rx={r} ry={r * 0.45} fill="#1c1048" stroke={C.cian} strokeWidth={3} opacity={dibujo} />
-        ))}
-        <path d="M 880 860 Q 760 930 520 935" stroke={C.cian} strokeWidth={2} strokeDasharray="8 8" fill="none" opacity={0.6 * dibujo} />
+        <path d={COSTA} fill="#1c1048" stroke={C.cian} strokeWidth={5} strokeDasharray={5000} strokeDashoffset={5000 * (1 - dibujo)} />
+        {[BARRERA, CAYO_GRANDE].map((d, i) => <path key={i} d={d} fill="#1c1048" stroke={C.cian} strokeWidth={3} opacity={dibujo} />)}
+        {ISLAS.map(([x, y, rx, ry], i) => {
+          const [cx, cy] = P(x, y);
+          return <ellipse key={i} cx={cx} cy={cy} rx={rx * 1.62} ry={ry * 1.62} fill="#1c1048" stroke={C.cian} strokeWidth={3} opacity={dibujo} />;
+        })}
+        {LAGOS.map(([x, y, rx, ry], i) => {
+          const [cx, cy] = P(x, y);
+          return <ellipse key={i} cx={cx} cy={cy} rx={rx * 1.62} ry={ry * 1.62} fill="#13306a" stroke={C.cian} strokeWidth={2} opacity={0.8 * dibujo} />;
+        })}
+        <path d={`M ${P(212, 590).join(' ')} Q ${P(250, 570).join(' ')} ${P(292, 548).join(' ')}`} stroke={C.cian} strokeWidth={2} strokeDasharray="8 8" fill="none" opacity={0.6 * dibujo} />
         {Object.entries(ZONAS).map(([id, zz], i) => {
           const activo = id === foco;
           const s = spring({ frame: f - 20 - i * 5, fps: 30, config: { damping: 12 } });
@@ -301,7 +323,7 @@ const Mapa: React.FC<{ e: Extract<Escena, { tipo: 'mapa' }> }> = ({ e }) => (
     <div style={{ position: 'relative', width: 640, display: 'flex', flexDirection: 'column', gap: 20 }}>
       <Titular texto={e.titulo} tam={108} color={e.foco ? ZONAS[e.foco].color : C.rosa} />
       <Aparece retraso={20}>
-        <div style={{ ...texto(30, '#d9c8f0', 600) }}>Ilustración propia y aproximada · no es el mapa oficial</div>
+        <div style={{ ...texto(30, '#d9c8f0', 600) }}>Redibujado a partir del mapa de los fans · aproximado, no oficial</div>
       </Aparece>
     </div>
   </AbsoluteFill>

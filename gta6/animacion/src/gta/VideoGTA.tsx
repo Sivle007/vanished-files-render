@@ -127,7 +127,7 @@ const Visual: React.FC<{ v: Mini['visual']; color: string }> = ({ v, color }) =>
         </svg>
       );
     case 'mapa':
-      return <div style={{ transform: 'scale(0.62)', transformOrigin: 'center' }}><MapaLeonida foco="vice" /></div>;
+      return <div style={{ transform: 'scale(0.62)', transformOrigin: 'center' }}><MapaLeonida foco="vice" fijo /></div>;
     case 'pareja':
       return (
         <svg width={640} height={600} viewBox="-320 -200 640 600">

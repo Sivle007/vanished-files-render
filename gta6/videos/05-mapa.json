@@ -48,7 +48,7 @@
     },
     {
       "capitulo": "Sobre este mapa",
-      "voz": "Un detalle sobre el mapa que estás viendo: es una ilustración nuestra, aproximada, solo para situarte. No es el mapa oficial del juego. Rockstar no ha publicado un mapa completo, y las ubicaciones exactas las veremos al jugar.",
+      "voz": "Un detalle sobre el mapa que estás viendo: lo hemos redibujado a partir de la reconstrucción que hicieron los fans con los tráileres. Es aproximado, no es el mapa oficial del juego. Rockstar no ha publicado un mapa completo, y las ubicaciones exactas las veremos al jugar.",
       "escena": { "tipo": "mapa", "titulo": "MAPA APROXIMADO", "foco": null, "fondo": "noche" }
     },
     {
