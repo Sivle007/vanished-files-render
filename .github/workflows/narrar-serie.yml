@@ -21,6 +21,8 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: npm ci
         working-directory: herramientas
+        env:
+          ONNXRUNTIME_NODE_INSTALL_CUDA: skip
       - run: node herramientas/narrar.mjs "produccion/${{ inputs.carpeta }}"
       - run: node herramientas/episodio.mjs "produccion/${{ inputs.carpeta }}"
       - name: Tiempos de cada palabra
