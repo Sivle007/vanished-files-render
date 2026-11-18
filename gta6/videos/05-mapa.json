@@ -1,0 +1,60 @@
+{
+  "titulo": "El mapa de GTA 6 explicado: Leonida zona por zona (Vice City y más)",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "GTA 6 no es solo Vice City. Es un estado entero. Se llama Leonida, y es la versión de Florida de Rockstar: playas, pantanos, cayos, pueblos costeros y bosques. Vamos a recorrerlo zona por zona, con lo que Rockstar ha enseñado, para que el jueves sepas a dónde ir primero.",
+      "escena": { "tipo": "mapa", "titulo": "LEONIDA", "foco": null, "fondo": "noche" }
+    },
+    {
+      "capitulo": "Leonida",
+      "voz": "Primero, el contexto. Leonida es un estado ficticio inspirado en Florida, con todo el humor satírico típico de la saga. Rockstar ha nombrado seis zonas: Vice City, los Cayos de Leonida, Grassrivers, Port Gellhorn, Ambrosia y el parque nacional Mount Kalaga.",
+      "escena": { "tipo": "lista", "titulo": "6 ZONAS NOMBRADAS", "items": [ "Vice City", "Leonida Keys", "Grassrivers", "Port Gellhorn", "Ambrosia", "Mount Kalaga" ], "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Vice City",
+      "voz": "Vice City es el corazón del mapa. Es la parodia de Miami: rascacielos, playas, neones, coches de lujo y vida nocturna. Es la gran ciudad del juego y, por lo visto en los tráileres, donde ocurre buena parte de la acción. Si te gustó el Vice City de 2002, esto es esa ciudad, pero en la actualidad.",
+      "escena": { "tipo": "mapa", "titulo": "VICE CITY", "foco": "vice", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Leonida Keys",
+      "voz": "Al sur están los Leonida Keys, una cadena de islas unidas por carreteras sobre el mar, inspiradas en los Cayos de Florida. Aguas turquesa, barcos, pesca y pueblos pequeños. Según el perfil oficial de Jason, es justo ahí donde lo encontramos al principio, trabajando para gente poco recomendable.",
+      "escena": { "tipo": "mapa", "titulo": "LEONIDA KEYS", "foco": "keys", "fondo": "playa" }
+    },
+    {
+      "capitulo": "Grassrivers",
+      "voz": "Grassrivers es la zona de pantanos, inspirada en los Everglades. Hierba alta, canales, aerodeslizadores y, sí, caimanes. Es de las zonas más salvajes del mapa, y en los tráileres ya vimos que la fauna de Leonida no está de adorno.",
+      "escena": { "tipo": "mapa", "titulo": "GRASSRIVERS", "foco": "grass", "fondo": "pantano" }
+    },
+    {
+      "capitulo": "Port Gellhorn",
+      "voz": "Port Gellhorn es una ciudad costera, con un ambiente mucho menos glamuroso que Vice City. Playas de temporada, moteles y un aire algo decadente. Es el contraste perfecto: la Florida de postal frente a la Florida que no sale en los folletos.",
+      "escena": { "tipo": "mapa", "titulo": "PORT GELLHORN", "foco": "port", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Ambrosia",
+      "voz": "Ambrosia es una comunidad industrial, en el interior. Fábricas, campos y pueblo pequeño. Es el tipo de lugar donde GTA suele esconder historias muy de carretera secundaria, lejos de los focos de la gran ciudad.",
+      "escena": { "tipo": "mapa", "titulo": "AMBROSIA", "foco": "ambrosia", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Mount Kalaga",
+      "voz": "Y al norte, el parque nacional Mount Kalaga: bosques, ríos, caminos de tierra y naturaleza. Es la zona para explorar en todoterreno, perderte y alejarte del tráfico. Si eres de los que pasan horas recorriendo el mapa sin hacer misiones, apunta este nombre.",
+      "escena": { "tipo": "mapa", "titulo": "MOUNT KALAGA", "foco": "kalaga", "fondo": "noche" }
+    },
+    {
+      "capitulo": "¿Cuánto mide?",
+      "voz": "¿Y cuánto mide todo esto? Aquí cuidado, porque Rockstar no ha dado una cifra oficial. Hay estimaciones de fans y de algunos medios que hablan del doble de GTA 5, o más, pero todas son cálculos hechos a partir de los tráileres. Lo sabremos de verdad cuando la gente lo recorra el jueves.",
+      "escena": { "tipo": "sello", "texto": "SIN CIFRA OFICIAL", "color": "ambar", "frase": "Las medidas que circulan son estimaciones", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Sobre este mapa",
+      "voz": "Un detalle sobre el mapa que estás viendo: es una ilustración nuestra, aproximada, solo para situarte. No es el mapa oficial del juego. Rockstar no ha publicado un mapa completo, y las ubicaciones exactas las veremos al jugar.",
+      "escena": { "tipo": "mapa", "titulo": "MAPA APROXIMADO", "foco": null, "fondo": "noche" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Así que ya lo sabes: Vice City en el centro, los cayos al sur, los pantanos de Grassrivers, Port Gellhorn en la costa, Ambrosia en el interior y Mount Kalaga al norte. Cuéntame en los comentarios: ¿cuál es la primera zona que vas a visitar? Suscríbete a Mapa Neón para más guías de Leonida.",
+      "escena": { "tipo": "cierre", "texto": "¿Qué zona visitas primero?", "fondo": "atardecer" }
+    }
+  ]
+}

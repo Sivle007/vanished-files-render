@@ -1,0 +1,49 @@
+{
+  "titulo": "¿GTA 6 sale en PC? Lo confirmado, los rumores y cuándo podría llegar",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "GTA 6 sale este jueves... pero no en PC. Si juegas en ordenador, seguramente te preguntas cuándo te toca a ti. Vamos a separar lo que está confirmado de lo que es rumor, y a ver qué nos dice la historia de Rockstar sobre cuánto podrías esperar.",
+      "escena": { "tipo": "portada", "titulo": "¿GTA 6 EN PC?", "sub": "Confirmado vs. rumor", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Lo confirmado",
+      "voz": "Lo confirmado es corto. GTA 6 sale el 19 de noviembre solo en PS5 y Xbox Series X y Series S. Rockstar no ha anunciado una fecha para PC. No hay reserva en tiendas de PC, ni ficha oficial en Steam, ni requisitos mínimos publicados.",
+      "escena": { "tipo": "lista", "titulo": "CONFIRMADO", "items": [ "19 NOV: solo PS5 y Xbox Series", "Sin fecha oficial para PC", "Sin reserva ni requisitos publicados" ], "fondo": "noche" }
+    },
+    {
+      "capitulo": "El rumor",
+      "voz": "Ahora, el rumor. El medio GamesBeat publicó, citando a varias fuentes de la industria que no dio a conocer, que Rockstar planea lanzar la versión de PC en el primer trimestre de 2027. Es decir, entre enero y marzo. Pero insisto: es un informe, no un anuncio. Rockstar no lo ha confirmado.",
+      "escena": { "tipo": "sello", "texto": "RUMOR", "color": "rojo", "frase": "PC en el primer trimestre de 2027 · sin confirmar", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Qué dice la historia",
+      "voz": "¿Tiene sentido ese plazo? Miremos lo que ha hecho Rockstar antes. GTA 5 salió en consolas en septiembre de 2013, y en PC no llegó hasta abril de 2015. Diecinueve meses después. Red Dead Redemption 2 salió en octubre de 2018 y llegó a PC en noviembre de 2019. Algo más de un año.",
+      "escena": { "tipo": "linea", "hitos": [ { "fecha": "SEP 2013", "texto": "GTA 5 consolas" }, { "fecha": "ABR 2015", "texto": "GTA 5 PC · +19 meses" }, { "fecha": "OCT 2018", "texto": "RDR 2 consolas" }, { "fecha": "NOV 2019", "texto": "RDR 2 PC · +12 meses" } ], "fondo": "atardecer" }
+    },
+    {
+      "voz": "Así que, si Rockstar repite su patrón, lo normal sería esperar más de un año. Un lanzamiento a principios de 2027 sería bastante más rápido de lo habitual. No es imposible, pero por eso conviene tomarlo con calma hasta que lo anuncien ellos.",
+      "escena": { "tipo": "dato", "cifra": "12-19", "etiqueta": "meses de espera en PC (historial)", "nota": "GTA 5 y RDR 2", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Por qué tardan",
+      "voz": "¿Y por qué Rockstar hace esto? Nadie fuera del estudio lo sabe con seguridad. Lo habitual en la industria es centrar el lanzamiento en pocas plataformas para pulirlo bien, y después adaptar la versión de PC, que tiene miles de combinaciones de hardware distintas. Es una explicación lógica, no una confirmación.",
+      "escena": { "tipo": "pregunta", "texto": "¿Por qué primero consolas?", "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "Cuidado con las estafas",
+      "voz": "Y ahora, lo más importante del vídeo. Hoy no existe ninguna descarga legítima de GTA 6 para PC. Si ves una web, un vídeo o un mensaje que te ofrece GTA 6 para PC gratis, o una beta, o un instalador, es una estafa. Muchas veces esconden virus o roban cuentas. No lo descargues.",
+      "escena": { "tipo": "alerta", "texto": "NO EXISTE GTA 6 PARA PC", "sub": "Cualquier descarga hoy es una estafa", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Qué hacer",
+      "voz": "¿Qué puedes hacer mientras? Si tienes acceso a una consola, juégalo ahí. Si no, espera al anuncio oficial antes de comprar piezas nuevas: sin requisitos publicados, cualquier lista que veas por internet es una suposición. Y sigue las fuentes oficiales de Rockstar.",
+      "escena": { "tipo": "lista", "titulo": "MIENTRAS TANTO", "items": [ "Juega en consola si puedes", "No compres piezas por rumores", "Sigue solo fuentes oficiales" ], "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Resumen: no hay fecha oficial para PC. El rumor más citado habla de principios de 2027, y la historia de Rockstar sugiere que podría tardar más. Cuéntame en los comentarios: ¿esperas a PC o te pasas a consola? Suscríbete a Mapa Neón y te avisamos el día que lo anuncien.",
+      "escena": { "tipo": "cierre", "texto": "¿Esperas a PC?", "fondo": "atardecer" }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "titulo": "GTA 6: 13 años de espera resumidos (filtraciones, retrasos y récords)",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "Trece años. Ese es el tiempo que ha pasado entre GTA 5 y GTA 6. En medio ha habido de todo: un anuncio de cuatro líneas, una de las mayores filtraciones de la historia de los videojuegos, dos retrasos y récords de audiencia. Esta es la historia completa de la espera, en orden.",
+      "escena": { "tipo": "portada", "titulo": "13 AÑOS DE ESPERA", "sub": "La historia completa de GTA 6", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "2013: GTA 5",
+      "voz": "Septiembre de 2013. Sale GTA 5. El juego vende tanto que, con los años, supera los doscientos treinta millones de copias, según Take Two. Y lo más importante para esta historia: GTA Online se convierte en una máquina de hacer dinero que mantiene a Rockstar ocupada durante casi una década.",
+      "escena": { "tipo": "dato", "cifra": "230 M", "etiqueta": "copias de GTA 5", "nota": "Según Take-Two (2026)", "fondo": "noche" }
+    },
+    {
+      "capitulo": "2022: el anuncio",
+      "voz": "Pasan los años, sin noticias. Hasta febrero de 2022, cuando Rockstar publica un breve comunicado: el desarrollo del siguiente Grand Theft Auto está muy avanzado. Sin título, sin imágenes, sin fecha. Solo eso. Y fue suficiente para que internet explotara.",
+      "escena": { "tipo": "linea", "hitos": [ { "fecha": "2013", "texto": "GTA 5" }, { "fecha": "FEB 2022", "texto": "Rockstar confirma el desarrollo" }, { "fecha": "SEP 2022", "texto": "La gran filtración" }, { "fecha": "DIC 2023", "texto": "Tráiler 1" } ], "activo": 1, "fondo": "noche" }
+    },
+    {
+      "capitulo": "La filtración",
+      "voz": "Septiembre de 2022. Aparecen en internet decenas de vídeos de una versión temprana del juego. Rockstar confirma que ha sufrido una intrusión en su red y que el material es real. Más tarde, la justicia británica relacionó el ataque con un joven hacker que ya había atacado a otras grandes empresas.",
+      "escena": { "tipo": "alerta", "texto": "FILTRACIÓN", "sub": "Septiembre de 2022 · vídeos de una versión temprana", "fondo": "noche" }
+    },
+    {
+      "capitulo": "2023: el tráiler 1",
+      "voz": "Diciembre de 2023. Rockstar tenía preparado el primer tráiler, pero se filtró horas antes, y decidió publicarlo antes de lo previsto. Ahí se confirmó todo: GTA 6, Vice City, Lucía, y fecha para 2025. El vídeo consiguió más de noventa millones de visualizaciones en YouTube en veinticuatro horas, un récord Guinness.",
+      "escena": { "tipo": "dato", "cifra": "90 M", "etiqueta": "visitas en 24 h · Tráiler 1", "nota": "Récord Guinness en YouTube", "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "2025: el primer retraso",
+      "voz": "Mayo de 2025. Primer golpe: Rockstar retrasa el juego de otoño de 2025 al 26 de mayo de 2026. Y solo cuatro días después, como para calmar los ánimos, publica el segundo tráiler, centrado en Jason y Lucía. Rockstar dijo que tuvo más de cuatrocientos setenta y cinco millones de visualizaciones en veinticuatro horas, sumando todas las plataformas.",
+      "escena": { "tipo": "linea", "hitos": [ { "fecha": "DIC 2023", "texto": "Tráiler 1" }, { "fecha": "2 MAY 2025", "texto": "Retraso a mayo 2026" }, { "fecha": "6 MAY 2025", "texto": "Tráiler 2" }, { "fecha": "NOV 2025", "texto": "Segundo retraso" } ], "activo": 1, "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "El segundo retraso",
+      "voz": "Noviembre de 2025. Segundo golpe: el juego pasa del 26 de mayo al 19 de noviembre de 2026. Rockstar explicó que necesitaba más tiempo para alcanzar el nivel de calidad que los jugadores esperan. Con un año de antelación, ya teníamos la fecha definitiva.",
+      "escena": { "tipo": "dato", "cifra": "19 NOV", "etiqueta": "La fecha definitiva", "nota": "Anunciada en noviembre de 2025", "fondo": "noche" }
+    },
+    {
+      "capitulo": "2026: la recta final",
+      "voz": "Y llega 2026. En junio abren las reservas, con las ediciones estándar y Ultimate. Las búsquedas de GTA 6 en Google se disparan a su punto más alto. En verano, Rockstar enseña más del juego. Y en noviembre, la precarga: hasta 212 gigas listos para la medianoche del jueves 19.",
+      "escena": { "tipo": "linea", "hitos": [ { "fecha": "JUN 2026", "texto": "Reservas" }, { "fecha": "VERANO", "texto": "Más avances" }, { "fecha": "NOV 2026", "texto": "Precarga" }, { "fecha": "19 NOV", "texto": "Lanzamiento" } ], "activo": 3, "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "En perspectiva",
+      "voz": "Ponlo en perspectiva. Quien tenía diez años cuando salió GTA 5, hoy tiene veintitrés. Una generación entera de consolas, la de PS4 y Xbox One, pasó sin un GTA nuevo. Pocas esperas en la historia del entretenimiento se pueden comparar con esta.",
+      "escena": { "tipo": "dato", "cifra": "10 → 23", "etiqueta": "años que cumplió un fan de GTA 5", "nota": "2013 → 2026", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Trece años, una filtración, dos retrasos y dos tráileres de récord. Y ahora sí, se acabó la espera. Cuéntame en los comentarios cuántos años tenías cuando salió GTA 5. Suscríbete a Mapa Neón, que esto acaba de empezar.",
+      "escena": { "tipo": "cierre", "texto": "¿Cuántos años tenías en 2013?", "fondo": "atardecer" }
+    }
+  ]
+}

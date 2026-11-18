@@ -1,0 +1,50 @@
+{
+  "titulo": "¿GTA 6 tiene online? Qué pasa con el multijugador (y con GTA Online)",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "Vas a encender GTA 6 el jueves y vas a buscar el botón de jugar online con tus amigos. Y probablemente no lo vas a encontrar. Vamos a ver qué ha dicho Rockstar del multijugador, qué pasó con GTA 5 y Red Dead 2, y qué ocurre con el GTA Online que ya conoces.",
+      "escena": { "tipo": "portada", "titulo": "¿GTA 6 TIENE ONLINE?", "sub": "Lo confirmado sobre el multijugador", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Lo confirmado",
+      "voz": "Lo confirmado: a día de hoy, Rockstar no ha anunciado ningún modo online para GTA 6. Ni nombre, ni fecha, ni detalles. Todo lo que ha enseñado, desde el primer tráiler hasta el lanzamiento, habla de la historia de Jason y Lucía. Así que lo prudente es contar con que, el jueves, lo que te llevas es la campaña.",
+      "escena": { "tipo": "sello", "texto": "SIN ONLINE ANUNCIADO", "color": "rojo", "frase": "Ni nombre, ni fecha, ni detalles", "fondo": "noche" }
+    },
+    {
+      "capitulo": "El precedente de GTA 5",
+      "voz": "¿Significa eso que no habrá online nunca? Para nada. Mira lo que pasó con GTA 5. El juego salió el 17 de septiembre de 2013, y GTA Online no llegó hasta el 1 de octubre. Dos semanas después. Rockstar quiso que primero todo el mundo jugara la historia.",
+      "escena": { "tipo": "linea", "hitos": [ { "fecha": "17 SEP 2013", "texto": "GTA 5" }, { "fecha": "1 OCT 2013", "texto": "GTA Online · +2 semanas" } ], "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "El precedente de Red Dead",
+      "voz": "Con Red Dead Redemption 2 pasó algo parecido. Salió a finales de octubre de 2018, y Red Dead Online llegó como beta a finales de noviembre, un mes después. Así que la costumbre de Rockstar es clara: primero la historia, y el online, más tarde y por separado.",
+      "escena": { "tipo": "linea", "hitos": [ { "fecha": "OCT 2018", "texto": "Red Dead Redemption 2" }, { "fecha": "NOV 2018", "texto": "Red Dead Online beta · +1 mes" } ], "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Los rumores",
+      "voz": "¿Y para cuándo el online de GTA 6? Aquí solo hay especulación. El director ejecutivo de Twitch comentó en una entrevista que el multijugador podría llegar en 2027, pero Rockstar no lo ha confirmado. Algunos medios hablan de principios de 2027. Son estimaciones, no anuncios.",
+      "escena": { "tipo": "sello", "texto": "RUMOR", "color": "ambar", "frase": "¿Online en 2027? Sin confirmar", "fondo": "noche" }
+    },
+    {
+      "capitulo": "¿Y GTA Online?",
+      "voz": "Ahora, la pregunta de los millones de jugadores de GTA Online: ¿se cierra? No. Take Two ha dicho que seguirá dando soporte al GTA Online actual después del lanzamiento de GTA 6. Así que tu personaje, tus coches y tus propiedades no desaparecen el jueves.",
+      "escena": { "tipo": "dato", "cifra": "SIGUE", "etiqueta": "GTA Online actual tras GTA 6", "nota": "Según Take-Two", "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "¿Se pasa el progreso?",
+      "voz": "¿Y podrás pasar tu dinero o tu personaje de GTA Online a GTA 6? No hay nada anunciado. Ni sí, ni no. Si ves vídeos que lo aseguran, son suposiciones. Lo mismo con el precio del online, el número de jugadores o el juego cruzado entre consolas: nada de eso está confirmado.",
+      "escena": { "tipo": "lista", "titulo": "SIN CONFIRMAR", "items": [ "Pasar progreso de GTA Online", "Precio del online", "Jugadores por sesión", "Juego cruzado PS5 / Xbox" ], "fondo": "noche" }
+    },
+    {
+      "capitulo": "Mi consejo",
+      "voz": "Mi consejo: tómatelo como una ventaja. Tienes una historia enorme por delante, sin presiones de nadie que vaya más rápido que tú. Disfrútala tranquilo, porque cuando llegue el online, Leonida va a estar lleno de gente.",
+      "escena": { "tipo": "pareja", "titulo": "PRIMERO, LA HISTORIA", "sub": "El online llegará después", "quien": "ambos", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Resumen: GTA 6 no tiene online anunciado para el lanzamiento, GTA 5 y Red Dead 2 recibieron el suyo semanas después, y el GTA Online actual sigue. Cuéntame: ¿vas a jugar la historia o esperas al online? Suscríbete a Mapa Neón y te avisamos en cuanto Rockstar diga algo.",
+      "escena": { "tipo": "cierre", "texto": "¿Historia u online?", "fondo": "atardecer" }
+    }
+  ]
+}

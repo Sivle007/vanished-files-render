@@ -1,0 +1,80 @@
+# Mapa Neón (GTA 6): narra con Kokoro en español y renderiza los 10 vídeos en paralelo, más miniaturas y marca.
+# Se lanza con: gh workflow run gta6.yml   (o -f videos='["01-hora"]' para rehacer solo algunos)
+name: GTA6
+
+on:
+  workflow_dispatch:
+    inputs:
+      videos:
+        description: Lista JSON de vídeos
+        required: false
+        default: '["01-hora","02-ediciones","03-espacio","04-pc","05-mapa","06-historia","07-online","08-vice-city","09-espera","10-records"]'
+
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        id: ${{ fromJSON(inputs.videos) }}
+    defaults:
+      run:
+        working-directory: gta6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libgbm1 libxrandr2 libxkbcommon0 libxfixes3 libxcomposite1 libxdamage1 libpango-1.0-0 libcairo2 libcups2 libasound2t64
+      - run: npm ci
+        working-directory: gta6/herramientas
+      - run: npm ci
+        working-directory: gta6/animacion
+      - name: Música
+        run: node herramientas/musica.mjs
+      - name: Narración
+        run: node herramientas/narrar.mjs "${{ matrix.id }}"
+      - run: npx remotion browser ensure
+        working-directory: gta6/animacion
+      - name: Render
+        working-directory: gta6/animacion
+        run: npx remotion render src/index.ts "GTA-${{ matrix.id }}" ../bruto.mp4 --crf 20 --concurrency 4 --audio-bitrate 192k
+      - name: Volumen a -14 LUFS
+        run: |
+          mkdir -p salida
+          ffmpeg -y -loglevel error -i bruto.mp4 -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 -c:a aac -b:a 192k "salida/${{ matrix.id }}.mp4"
+          cp "animacion/public/gta/${{ matrix.id }}/tiempos.json" "salida/${{ matrix.id }}-tiempos.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ matrix.id }}
+          path: gta6/salida
+          retention-days: 3
+
+  miniaturas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: gta6/animacion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: sudo apt-get update && sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libgbm1 libxrandr2 libxkbcommon0 libxfixes3 libxcomposite1 libxdamage1 libpango-1.0-0 libcairo2 libcups2 libasound2t64
+      - run: npm ci
+      - run: npx remotion browser ensure
+      - name: Miniaturas, logo y banner
+        run: |
+          mkdir -p ../salida
+          for id in 01-hora 02-ediciones 03-espacio 04-pc 05-mapa 06-historia 07-online 08-vice-city 09-espera 10-records; do
+            npx remotion still src/index.ts "GTA-mini-$id" "../salida/miniatura-$id.jpg" --image-format jpeg --jpeg-quality 92 --scale 0.6667
+          done
+          npx remotion still src/index.ts GTA-logo ../salida/logo.png
+          npx remotion still src/index.ts GTA-banner ../salida/banner.jpg --image-format jpeg --jpeg-quality 92
+      - uses: actions/upload-artifact@v4
+        with:
+          name: miniaturas
+          path: gta6/salida
+          retention-days: 3

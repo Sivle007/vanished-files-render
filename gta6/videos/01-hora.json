@@ -1,0 +1,58 @@
+{
+  "titulo": "¿A qué hora sale GTA 6? Horario exacto por país (PS5 y Xbox)",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "Faltan horas para GTA 6. Trece años después de GTA 5, Rockstar abre por fin las puertas de Vice City. Pero hay una pregunta que se repite en todas partes: ¿a qué hora exactamente vas a poder jugar? Vamos a dejarlo claro, país por país, en tres minutos.",
+      "escena": { "tipo": "portada", "titulo": "¿A QUÉ HORA SALE GTA 6?", "sub": "Horario por país · PS5 y Xbox", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "La fecha",
+      "voz": "Primero, la fecha. GTA 6 sale el jueves 19 de noviembre de 2026, en PS5 y en Xbox Series X y Series S. Rockstar retrasó el juego dos veces: primero de 2025 a mayo de 2026, y después al 19 de noviembre. Y a estas alturas no hay ningún retraso nuevo.",
+      "escena": { "tipo": "dato", "cifra": "19 NOV", "etiqueta": "Jueves · PS5 y Xbox Series X|S", "nota": "Sin nuevos retrasos", "fondo": "noche" }
+    },
+    {
+      "voz": "Ahora, lo importante: cómo se desbloquea. Según la información de lanzamiento, el juego se activa a medianoche, hora local. Eso quiere decir que no sale a la vez en todo el mundo. Cada país lo recibe cuando su reloj marca las doce de la noche del jueves.",
+      "escena": { "tipo": "sello", "texto": "MEDIANOCHE", "color": "verde", "frase": "Hora local de cada país · jueves 19", "fondo": "noche" }
+    },
+    {
+      "capitulo": "España",
+      "voz": "Si estás en España peninsular, eso es a las doce de la noche del miércoles al jueves. Es decir, en cuanto termine el miércoles 18, ya puedes entrar. Y si vives en Canarias, el desbloqueo llega cuando en las islas también sean las doce.",
+      "escena": { "tipo": "relojes", "titulo": "ESPAÑA", "filas": [ { "lugar": "España peninsular", "hora": "00:00", "nota": "noche del miércoles al jueves" }, { "lugar": "Canarias", "hora": "00:00", "nota": "hora de las islas" } ], "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "Latinoamérica",
+      "voz": "En Latinoamérica pasa lo mismo, a medianoche de cada país. En Ciudad de México, Bogotá, Lima, Santiago o Buenos Aires, el juego se abre a las doce de la noche del jueves, hora local. Así que Argentina y Chile empiezan antes que México, simplemente porque allí el reloj va por delante.",
+      "escena": { "tipo": "relojes", "titulo": "LATINOAMÉRICA", "filas": [ { "lugar": "Buenos Aires · Santiago", "hora": "00:00", "nota": "= 04:00 en España" }, { "lugar": "Bogotá · Lima", "hora": "00:00", "nota": "= 06:00 en España" }, { "lugar": "Ciudad de México", "hora": "00:00", "nota": "= 07:00 en España" } ], "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "Estados Unidos",
+      "voz": "Y en Estados Unidos, la medianoche llega primero a Nueva York y Miami, y tres horas después a Los Ángeles. Dato curioso: si el desbloqueo es por hora local, los primeros del planeta en jugar serán los de Nueva Zelanda, casi medio día antes que España.",
+      "escena": { "tipo": "relojes", "titulo": "EE. UU. Y EL MUNDO", "filas": [ { "lugar": "Nueva Zelanda", "hora": "00:00", "nota": "los primeros del planeta" }, { "lugar": "Nueva York · Miami", "hora": "00:00", "nota": "= 06:00 en España" }, { "lugar": "Los Ángeles", "hora": "00:00", "nota": "= 09:00 en España" } ], "fondo": "playa" }
+    },
+    {
+      "capitulo": "Ojo con esto",
+      "voz": "Ahora, un aviso honesto. Algunos medios publican horarios distintos, sincronizados a una misma hora para varios países. En otros lanzamientos, Xbox también ha tenido en cuenta la zona horaria de la consola. Así que la fuente buena es una sola: la ficha del juego en tu tienda, que te muestra la cuenta atrás real.",
+      "escena": { "tipo": "sello", "texto": "COMPRUEBA", "color": "ambar", "frase": "La cuenta atrás de tu tienda manda", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Prepárate",
+      "voz": "Para no perder ni un minuto, haz tres cosas hoy. Uno: si compraste en digital, la precarga ya está abierta, así que descárgalo ya. Dos: deja la consola en modo reposo con descargas automáticas, por si llega un parche. Y tres: comprueba que la fecha y la hora de tu consola están bien puestas.",
+      "escena": { "tipo": "lista", "titulo": "HAZLO HOY", "items": [ "Precarga el juego (ya está abierta)", "Modo reposo + descargas automáticas", "Revisa fecha y hora de la consola" ], "fondo": "atardecer" }
+    },
+    {
+      "voz": "La precarga ocupa hasta 212 gigas, según la consola. Si tu disco va justo, borra o mueve juegos antes de la noche del lanzamiento, porque con miles de personas descargando a la vez, las prisas de última hora salen caras.",
+      "escena": { "tipo": "consola", "titulo": "PRECARGA", "etiqueta": "hasta 212 GB", "progreso": 0.86, "fondo": "noche" }
+    },
+    {
+      "capitulo": "Si no te deja jugar",
+      "voz": "¿Y si a medianoche no te deja entrar? No te asustes. Mira primero que la precarga terminó al cien por cien. Después, busca actualizaciones del juego, reinicia la consola y vuelve a intentarlo. En un estreno así, los servidores de las tiendas suelen ir saturados los primeros minutos.",
+      "escena": { "tipo": "lista", "titulo": "SI NO ARRANCA", "items": [ "¿Precarga al 100 %?", "Busca actualizaciones", "Reinicia la consola", "Espera unos minutos" ], "fondo": "noche" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Resumen: jueves 19 de noviembre, a medianoche de tu país, en PS5 y Xbox Series. Precarga hoy y revisa la cuenta atrás de tu tienda. Cuéntame en los comentarios desde qué país vas a jugar, y suscríbete a Mapa Neón, porque en el canal tienes todas las guías de lanzamiento.",
+      "escena": { "tipo": "cierre", "texto": "¿Desde qué país juegas?", "fondo": "atardecer" }
+    }
+  ]
+}

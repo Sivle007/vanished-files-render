@@ -1,0 +1,55 @@
+{
+  "titulo": "GTA 6 ocupa 212 GB: cuánto espacio necesitas y cómo preparar tu PS5 o Xbox",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "212 gigas. Ese es el tamaño de la precarga de GTA 6, según la consola. Y en una Xbox Series S, eso es más de la mitad del disco. Si no preparas tu consola ahora, la noche del lanzamiento te vas a quedar mirando una barra de descarga. Vamos a evitarlo.",
+      "escena": { "tipo": "portada", "titulo": "GTA 6 OCUPA 212 GB", "sub": "Cómo preparar tu consola", "fondo": "noche" }
+    },
+    {
+      "capitulo": "El tamaño",
+      "voz": "El dato oficial es este: la precarga necesita hasta 212 gigas, dependiendo de la consola. Y piensa que, además, es muy probable que el día de salida llegue una actualización. Así que lo prudente es dejar libre un margen extra, por ejemplo unos treinta gigas más.",
+      "escena": { "tipo": "dato", "cifra": "212 GB", "etiqueta": "Precarga, según la consola", "nota": "Deja margen para parches", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Tu consola",
+      "voz": "Ahora, cuánto espacio real tiene tu consola, porque no es lo que pone en la caja. La PS5 original trae unos 667 gigas utilizables. La PS5 Slim, unos 848. La Xbox Series X, unos 802. Y la Series S de 512, solo unos 364. Ahí GTA 6 se come casi seis de cada diez gigas.",
+      "escena": { "tipo": "almacen", "titulo": "ESPACIO ÚTIL APROX.", "juego": 212, "consolas": [ { "nombre": "PS5 original", "gb": 667 }, { "nombre": "PS5 Slim", "gb": 848 }, { "nombre": "Xbox Series X", "gb": 802 }, { "nombre": "Xbox Series S 512", "gb": 364 } ], "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "Liberar espacio",
+      "voz": "Para liberar espacio, empieza por lo que más ocupa. Entra en el almacenamiento de la consola, ordena los juegos por tamaño y borra los que no tocas desde hace meses. Tus partidas guardadas suelen estar en la nube o se pueden conservar, pero compruébalo antes de borrar nada.",
+      "escena": { "tipo": "lista", "titulo": "LIBERA ESPACIO", "items": [ "Ajustes → Almacenamiento", "Ordena por tamaño", "Borra lo que no juegas", "Antes: revisa tus partidas guardadas" ], "fondo": "noche" }
+    },
+    {
+      "capitulo": "Disco externo",
+      "voz": "Un truco: un disco USB externo sirve como trastero. En PS5 y en Xbox Series puedes mover ahí tus juegos de nueva generación para no tener que descargarlos otra vez, aunque para jugarlos tendrás que devolverlos al disco interno. Y GTA 6 debe ir siempre en el almacenamiento rápido interno o en una ampliación compatible.",
+      "escena": { "tipo": "flecha", "de": "INTERNO", "a": "USB EXTERNO", "etiqueta": "Mueve otros juegos, no GTA 6", "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "Ampliar",
+      "voz": "Si vas a ampliar, en PS5 sirve un SSD NVMe compatible en la ranura interna, y en Xbox Series, la tarjeta de expansión oficial. Es la única forma de tener más espacio rápido donde GTA 6 pueda funcionar. No es obligatorio, pero si tu consola va siempre llena, es la solución definitiva.",
+      "escena": { "tipo": "comparar", "izq": { "titulo": "PS5", "precio": "", "items": [ "SSD NVMe M.2", "En la ranura interna", "Compatible con PS5" ] }, "der": { "titulo": "XBOX SERIES", "precio": "", "items": [ "Tarjeta de expansión", "Se conecta detrás", "Mismo rendimiento" ] }, "fondo": "noche" }
+    },
+    {
+      "capitulo": "Precarga",
+      "voz": "Con el espacio listo, precarga. Si compraste en digital, la precarga ya está abierta. Abre la ficha del juego en tu tienda y pulsa descargar. Si tu internet es lento, hazlo hoy: con doscientos gigas, una conexión de cincuenta megas tarda unas nueve horas.",
+      "escena": { "tipo": "consola", "titulo": "PRECARGA ABIERTA", "etiqueta": "212 GB · ~9 h a 50 Mb/s", "progreso": 0.42, "fondo": "noche" }
+    },
+    {
+      "capitulo": "Trucos de descarga",
+      "voz": "Tres trucos para que baje más rápido. Conecta la consola por cable, no por wifi. Cierra otras descargas y que nadie en casa esté viendo series en 4K. Y deja la consola en modo reposo con internet activado: descarga sin que tengas que vigilarla.",
+      "escena": { "tipo": "lista", "titulo": "DESCARGA MÁS RÁPIDO", "items": [ "Cable de red, no wifi", "Pausa otras descargas", "Modo reposo con internet" ], "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Resumen",
+      "voz": "Resumen: necesitas hasta 212 gigas, más margen para parches. Libera espacio hoy, usa el disco externo para mover otros juegos, y precarga cuanto antes. Así, a medianoche, solo te quedará darle a jugar.",
+      "escena": { "tipo": "lista", "titulo": "CHECKLIST", "items": [ "212 GB + margen", "Libera espacio", "Precarga hoy", "A medianoche: jugar" ], "fondo": "noche" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Cuéntame en los comentarios: ¿cuántos gigas libres tienes ahora mismo? Y si este vídeo te ha ahorrado una noche de espera, suscríbete a Mapa Neón. En el canal tienes el horario de salida por país y todas las guías de GTA 6.",
+      "escena": { "tipo": "cierre", "texto": "¿Cuántos GB te quedan?", "fondo": "atardecer" }
+    }
+  ]
+}

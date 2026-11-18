@@ -1,0 +1,50 @@
+{
+  "titulo": "Los récords que GTA 6 rompió ANTES de salir",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "GTA 6 todavía no ha salido, y ya tiene un récord Guinness. Sus tráileres, sus búsquedas en Google y hasta su precio han hecho historia. Y todo eso, sin que nadie haya jugado un solo minuto. Estos son los récords y las cifras más locas de GTA 6 antes del lanzamiento.",
+      "escena": { "tipo": "portada", "titulo": "LOS RÉCORDS DE GTA 6", "sub": "Antes de salir", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Tráiler 1",
+      "voz": "Récord número uno: el primer tráiler. En diciembre de 2023 consiguió noventa coma cuatro millones de visualizaciones en YouTube en sus primeras veinticuatro horas. Guinness lo reconoció como el tráiler de videojuego más visto en un día. Y eso que se publicó antes de lo previsto, por una filtración.",
+      "escena": { "tipo": "dato", "cifra": "90,4 M", "etiqueta": "visitas en 24 h en YouTube", "nota": "Récord Guinness · Tráiler 1", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Tráiler 2",
+      "voz": "Récord número dos: el segundo tráiler, en mayo de 2025. Rockstar dijo que acumuló más de cuatrocientos setenta y cinco millones de visualizaciones en veinticuatro horas, sumando YouTube, X, TikTok, Instagram y Facebook. Rockstar lo llamó el mayor lanzamiento de un vídeo de la historia. Ojo: solo en YouTube, la cifra fue menor que la del primero.",
+      "escena": { "tipo": "dato", "cifra": "475 M", "etiqueta": "visitas en 24 h, todas las plataformas", "nota": "Según Rockstar · Tráiler 2", "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "Más que las criptomonedas",
+      "voz": "Récord número tres, este más curioso. Cuando se abrieron las reservas, en junio de 2026, las búsquedas de GTA 6 en Google alcanzaron su punto más alto. Un medio especializado en criptomonedas señaló que, esa semana, el mundo buscaba más GTA 6 que criptomonedas.",
+      "escena": { "tipo": "comparar", "izq": { "titulo": "GTA 6", "precio": "33", "items": [ "Interés medio semanal", "Google Trends" ] }, "der": { "titulo": "CRYPTO", "precio": "21", "items": [ "Interés medio semanal", "Google Trends" ] }, "fondo": "noche" }
+    },
+    {
+      "capitulo": "El precio",
+      "voz": "Cifra número cuatro: el precio. En Estados Unidos, la edición estándar cuesta 79,99 dólares, diez más que los setenta habituales de los grandes lanzamientos de esta generación. En Europa, 79,99 €. Y la Ultimate llega a los cien.",
+      "escena": { "tipo": "dato", "cifra": "$79.99", "etiqueta": "Estándar en EE. UU. (antes: $69.99)", "nota": "Ultimate: 99,99 €", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "La herencia de GTA 5",
+      "voz": "Para entender la expectación, hay que mirar a su antecesor. GTA 5 recaudó ochocientos millones de dólares en su primer día, y mil millones en solo tres días, en 2013. Eso también fueron récords Guinness. Y desde entonces ha superado los doscientos treinta millones de copias.",
+      "escena": { "tipo": "dato", "cifra": "1.000 M $", "etiqueta": "GTA 5 en 3 días (2013)", "nota": "Récord Guinness", "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "La saga entera",
+      "voz": "Y la saga completa de Grand Theft Auto ya ronda los cuatrocientos setenta y cinco millones de unidades vendidas, según los datos de Take Two de este año. Con GTA 6, esa cifra solo puede ir hacia arriba.",
+      "escena": { "tipo": "dato", "cifra": "475 M", "etiqueta": "unidades de toda la saga GTA", "nota": "Según Take-Two (2026)", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Lo que viene",
+      "voz": "¿Y ahora? La gran pregunta es si GTA 6 superará los mil millones de GTA 5 en sus primeros días. Hay analistas que creen que sí, pero eso no lo sabremos hasta que Take Two publique cifras oficiales. Lo que sí es seguro: el jueves va a ser uno de los días más grandes de la historia de los videojuegos.",
+      "escena": { "tipo": "pregunta", "texto": "¿Superará a GTA 5?", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Un récord Guinness, cuatrocientos setenta y cinco millones de visitas en un día y más búsquedas que las criptomonedas. Todo antes de salir. Cuéntame: ¿crees que GTA 6 batirá el récord de GTA 5? Suscríbete a Mapa Neón y lo comprobamos juntos.",
+      "escena": { "tipo": "cierre", "texto": "¿Batirá a GTA 5?", "fondo": "atardecer" }
+    }
+  ]
+}

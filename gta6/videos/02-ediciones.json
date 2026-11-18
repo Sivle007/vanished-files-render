@@ -1,0 +1,54 @@
+{
+  "titulo": "GTA 6: ¿Edición Estándar o Ultimate? Qué incluye cada una y cuál comprar",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "Ochenta euros, o cien. Esa es la decisión que tienes delante antes de comprar GTA 6. Las dos ediciones traen el mismo juego, la misma historia y el mismo mapa. Entonces, ¿qué pagas con esos veinte euros de más? Te lo cuento todo, y al final te digo cuál tiene más sentido según cómo juegues.",
+      "escena": { "tipo": "portada", "titulo": "¿ESTÁNDAR O ULTIMATE?", "sub": "Qué incluye cada edición de GTA 6", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Precios",
+      "voz": "Los precios. La edición estándar cuesta 79,99 € en Europa y 79,99 dólares en Estados Unidos. La Ultimate cuesta 99,99. En cada país de Latinoamérica el precio cambia por impuestos, así que el número final siempre es el que ves en la tienda de tu consola.",
+      "escena": { "tipo": "comparar", "izq": { "titulo": "ESTÁNDAR", "precio": "79,99 €", "items": [ "Juego completo", "Historia y mapa enteros" ] }, "der": { "titulo": "ULTIMATE", "precio": "99,99 €", "items": [ "Juego completo", "+ contenido exclusivo", "Solo digital" ] }, "fondo": "noche" }
+    },
+    {
+      "capitulo": "Estándar",
+      "voz": "La estándar es el juego base, sin extras. Pero ojo, eso no significa un juego recortado. Tienes la historia completa de Jason y Lucía, todo Leonida y todo lo que Rockstar ha enseñado en los tráileres. Para la mayoría de la gente, esto es exactamente lo que buscan.",
+      "escena": { "tipo": "dato", "cifra": "100 %", "etiqueta": "de la historia y del mapa", "nota": "Edición estándar", "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "Ultimate",
+      "voz": "La Ultimate añade contenido exclusivo dentro del juego. Según lo anunciado, incluye vehículos, armas y ropa exclusivos, además de tiendas, garajes y talleres de personalización extra, y actividades adicionales. Varios medios citan, por ejemplo, un deportivo clásico y revólveres personalizados.",
+      "escena": { "tipo": "lista", "titulo": "LO QUE AÑADE LA ULTIMATE", "items": [ "Vehículos exclusivos", "Armas y ropa exclusivas", "Tiendas, garajes y talleres extra", "Actividades adicionales" ], "fondo": "noche" }
+    },
+    {
+      "voz": "Y aquí está el detalle que mucha gente no sabe. Rockstar dice que ese contenido no te lo dan todo de golpe al empezar. Se va desbloqueando a lo largo de la historia. O sea, no es un atajo para ser millonario el primer día. Es más bien un extra que vas encontrando mientras juegas.",
+      "escena": { "tipo": "sello", "texto": "POCO A POCO", "color": "ambar", "frase": "El extra se desbloquea con la historia", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Bonus de reserva",
+      "voz": "Luego está el bonus de reserva: el Vintage Vice City Pack, un paquete de estética retro. Viene con las dos ediciones. En digital entra con las compras hechas hasta el 20 de noviembre, según la información publicada, y en físico, mientras haya existencias. Si lo quieres, no lo dejes para la semana que viene.",
+      "escena": { "tipo": "dato", "cifra": "20 NOV", "etiqueta": "Límite del bonus en digital", "nota": "Vintage Vice City Pack · ambas ediciones", "fondo": "playa" }
+    },
+    {
+      "capitulo": "Mejorar después",
+      "voz": "Otra cosa importante: no tienes que decidirlo hoy para siempre. Rockstar ofrece una mejora a Ultimate para quien ya tenga la estándar, que se puede comprar en cualquier momento. Así que puedes empezar con la estándar y, si el juego te atrapa, pasar a la Ultimate después.",
+      "escena": { "tipo": "flecha", "de": "ESTÁNDAR", "a": "ULTIMATE", "etiqueta": "Mejora disponible después", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Físico o digital",
+      "voz": "¿Y físico o digital? La Ultimate es solo digital. Con la estándar puedes elegir. El digital te deja precargar y jugar justo a medianoche. El físico lo puedes revender o prestar. Eso sí: pase lo que pase, tendrás que descargar muchos gigas, así que prepara espacio igualmente.",
+      "escena": { "tipo": "comparar", "izq": { "titulo": "DIGITAL", "precio": "", "items": [ "Precarga", "Juegas a medianoche", "Estándar o Ultimate" ] }, "der": { "titulo": "FÍSICO", "precio": "", "items": [ "Revender o prestar", "Solo estándar", "Igual necesitas espacio" ] }, "fondo": "noche" }
+    },
+    {
+      "capitulo": "Mi recomendación",
+      "voz": "Mi opinión, y es solo eso, una opinión: si vas a jugar la historia una vez y ya, la estándar es suficiente. Si sabes que vas a pasar cientos de horas en Leonida y te gusta coleccionar coches y ropa, la Ultimate tiene sentido. Y si dudas, empieza por la estándar: la mejora siempre está ahí.",
+      "escena": { "tipo": "comparar", "izq": { "titulo": "ESTÁNDAR SI…", "precio": "", "items": [ "Juegas la historia", "Quieres ahorrar 20 €", "Dudas" ] }, "der": { "titulo": "ULTIMATE SI…", "precio": "", "items": [ "Cientos de horas", "Coleccionas coches y ropa", "Lo quieres todo" ] }, "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Antes de pagar, mira siempre el precio final en tu tienda, porque cambia según el país y las ofertas. Y cuéntame en los comentarios: ¿cuál vas a comprar, estándar o Ultimate? Suscríbete a Mapa Neón para no perderte ninguna guía de GTA 6.",
+      "escena": { "tipo": "cierre", "texto": "¿Estándar o Ultimate?", "fondo": "atardecer" }
+    }
+  ]
+}

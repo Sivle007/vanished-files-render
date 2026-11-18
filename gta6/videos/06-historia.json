@@ -1,0 +1,54 @@
+{
+  "titulo": "Jason y Lucía: la historia de GTA 6 explicada SIN spoilers",
+  "segmentos": [
+    {
+      "capitulo": "Intro",
+      "voz": "Por primera vez en la era moderna de la saga, una de las protagonistas de un GTA principal es una mujer. Y por primera vez, la historia gira en torno a una pareja. Se llaman Jason y Lucía. Esto es todo lo que Rockstar ha contado sobre ellos y su historia, sin un solo spoiler del juego.",
+      "escena": { "tipo": "pareja", "titulo": "JASON Y LUCÍA", "sub": "La historia, sin spoilers", "quien": "ambos", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Lucía",
+      "voz": "Empecemos por Lucía Caminos. Según su perfil oficial, su padre le enseñó a pelear en cuanto aprendió a caminar, y la vida no ha dejado de golpearla desde entonces. Luchar por su familia la llevó a la prisión de Leonida. Y cuando sale, tiene claro que quiere algo mejor.",
+      "escena": { "tipo": "pareja", "titulo": "LUCÍA CAMINOS", "sub": "Luchadora · sale de prisión", "quien": "lucia", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Jason",
+      "voz": "Jason Duval creció rodeado de estafadores y delincuentes. Intentó dejar atrás una adolescencia complicada pasando por el ejército, pero acabó en los cayos de Leonida, haciendo lo que mejor sabe: trabajar para traficantes locales. Dicho de otra forma: quiere salir, pero no sabe cómo.",
+      "escena": { "tipo": "pareja", "titulo": "JASON DUVAL", "sub": "Exmilitar · atrapado en los cayos", "quien": "jason", "fondo": "playa" }
+    },
+    {
+      "capitulo": "La premisa",
+      "voz": "¿Y qué los une? La descripción oficial dice que un golpe fácil sale mal, y eso los mete de lleno en una conspiración que se extiende por todo Leonida. A partir de ahí, solo se tienen el uno al otro. Es una historia de amor y de crimen a la vez, con mucho de Bonnie y Clyde.",
+      "escena": { "tipo": "cita", "texto": "Un golpe fácil que sale mal…", "fuente": "Premisa oficial de Rockstar", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Los secundarios",
+      "voz": "Alrededor de ellos, Rockstar ya presentó a varios personajes. Cal Hampton, el amigo de Jason, un hombre que desconfía de todo. Boobie Ike, una leyenda local de Vice City con negocios en inmobiliarias, un club y un estudio de grabación. Dre Quan Priest, que quiere triunfar con su sello de música.",
+      "escena": { "tipo": "lista", "titulo": "SECUNDARIOS", "items": [ "Cal Hampton · amigo de Jason", "Boobie Ike · leyenda de Vice City", "Dre'Quan Priest · sello musical" ], "fondo": "ciudad" }
+    },
+    {
+      "voz": "Y hay más. Las Real Dimez, un dúo de raperas de la zona. Raúl Bautista, un atracador veterano que busca a gente con agallas. Y Brian Heder, un traficante de la vieja escuela de los cayos. Todos aparecen en los perfiles oficiales, y todos apuntan a una historia de música, dinero y contrabando.",
+      "escena": { "tipo": "lista", "titulo": "Y ADEMÁS", "items": [ "Real Dimez · dúo de raperas", "Raúl Bautista · atracador veterano", "Brian Heder · traficante de los cayos" ], "fondo": "ciudad" }
+    },
+    {
+      "capitulo": "Cómo se juega",
+      "voz": "En cuanto a cómo se juega, en el mundo abierto podrás cambiar entre Jason y Lucía, una idea parecida a la de los tres protagonistas de GTA 5. Pero aquí la historia está pensada como un dúo: dos personas que dependen la una de la otra.",
+      "escena": { "tipo": "pareja", "titulo": "CAMBIA DE PERSONAJE", "sub": "Jason ⇄ Lucía", "quien": "ambos", "fondo": "noche" }
+    },
+    {
+      "capitulo": "El tono",
+      "voz": "¿Y el tono? Los tráileres dejan claro que GTA 6 vuelve a reírse de la sociedad actual: redes sociales, vídeos virales, influencers y noticias absurdas, al estilo de la Florida real que vemos en internet. Leonida es una sátira, como siempre lo fue Vice City.",
+      "escena": { "tipo": "dato", "cifra": "SÁTIRA", "etiqueta": "Redes, virales y la Florida de internet", "nota": "Lo que muestran los tráileres", "fondo": "atardecer" }
+    },
+    {
+      "capitulo": "Lo que no sabemos",
+      "voz": "Lo que no sabemos, y está bien no saberlo: cómo termina, quién traiciona a quién y qué es exactamente esa conspiración. Cualquiera que diga que lo sabe antes del jueves está suponiendo. Mejor descubrirlo jugando.",
+      "escena": { "tipo": "pregunta", "texto": "¿Cómo termina? Nadie lo sabe aún", "fondo": "noche" }
+    },
+    {
+      "capitulo": "Cierre",
+      "voz": "Así que ya conoces a la pareja: Lucía, que sale de prisión buscando una vida mejor, y Jason, que quiere escapar de los cayos. Un golpe que sale mal, y todo Leonida en contra. Cuéntame: ¿con quién vas a jugar más, con Jason o con Lucía? Suscríbete a Mapa Neón.",
+      "escena": { "tipo": "cierre", "texto": "¿Jason o Lucía?", "fondo": "atardecer" }
+    }
+  ]
+}
