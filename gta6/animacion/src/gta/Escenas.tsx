@@ -376,18 +376,68 @@ const Sello: React.FC<{ e: Extract<Escena, { tipo: 'sello' }> }> = ({ e }) => {
   );
 };
 
-// Siluetas genéricas de una pareja (no son los personajes del juego, solo la idea de un dúo).
-const Silueta: React.FC<{ mujer?: boolean; color: string; x: number }> = ({ mujer, color, x }) => {
+// Jason y Lucía dibujados por el canal en estilo cartoon plano (fan art propio, no arte oficial).
+// Se reconocen por la ropa: él camiseta de tirantes blanca y cargo verde; ella top rosa de manga larga y vaqueros morados.
+export const PersonajeGTA: React.FC<{ quien: 'jason' | 'lucia'; x: number; brillo: string }> = ({ quien, x, brillo }) => {
   const f = useCurrentFrame();
   const resp = Math.sin(f / 18) * 3;
+  const borde = { stroke: '#0b0820', strokeWidth: 5, strokeLinejoin: 'round' as const };
+  if (quien === 'jason') {
+    const piel = '#c98d6b';
+    return (
+      <g transform={`translate(${x} 0)`} style={{ filter: `drop-shadow(0 0 14px ${brillo})` }}>
+        <path d="M-72 -322 L -8 -322 L -14 -18 L -66 -18 Z" fill="#56622f" {...borde} />
+        <path d="M8 -322 L 72 -322 L 66 -18 L 14 -18 Z" fill="#56622f" {...borde} />
+        <rect x={-66} y={-210} width={36} height={46} rx={6} fill="#47512a" {...borde} strokeWidth={3} />
+        <rect x={30} y={-210} width={36} height={46} rx={6} fill="#47512a" {...borde} strokeWidth={3} />
+        <rect x={-80} y={-26} width={70} height={26} rx={10} fill="#2a1e14" {...borde} />
+        <rect x={10} y={-26} width={70} height={26} rx={10} fill="#2a1e14" {...borde} />
+        <rect x={-74} y={-336} width={148} height={18} rx={4} fill="#2a1e14" {...borde} strokeWidth={3} />
+        <g transform={`translate(0 ${resp})`}>
+          <path d="M-88 -548 Q -126 -520 -116 -430 L -108 -340 L -80 -340 L -84 -432 L -72 -500 Z" fill={piel} {...borde} />
+          <path d="M88 -548 Q 126 -520 116 -430 L 108 -340 L 80 -340 L 84 -432 L 72 -500 Z" fill={piel} {...borde} />
+          <path d="M-86 -548 Q -40 -566 -24 -560 Q 0 -520 24 -560 Q 40 -566 86 -548 L 74 -330 L -74 -330 Z" fill="#f1ede4" {...borde} />
+          <path d="M-22 -556 Q 0 -500 22 -556" fill="none" stroke="#d9c27a" strokeWidth={4} />
+          <rect x={-20} y={-596} width={40} height={44} fill={piel} {...borde} strokeWidth={4} />
+          <ellipse cx={0} cy={-640} rx={50} ry={60} fill={piel} {...borde} />
+          <path d="M-46 -632 Q -42 -580 0 -578 Q 42 -580 46 -632 Q 30 -604 0 -602 Q -30 -604 -46 -632 Z" fill="#3b2a20" opacity={0.6} />
+          <path d="M-52 -650 Q -56 -712 0 -712 Q 56 -712 52 -650 Q 36 -684 0 -682 Q -36 -684 -52 -650 Z" fill="#2b1d14" {...borde} strokeWidth={4} />
+          <rect x={-26} y={-650} width={12} height={8} rx={3} fill="#1a1010" />
+          <rect x={14} y={-650} width={12} height={8} rx={3} fill="#1a1010" />
+          <path d="M-32 -664 L -12 -660 M 12 -660 L 32 -664" stroke="#1a1010" strokeWidth={6} strokeLinecap="round" />
+          <path d="M-12 -606 Q 0 -602 12 -606" stroke="#5a3324" strokeWidth={4} fill="none" strokeLinecap="round" />
+        </g>
+      </g>
+    );
+  }
+  const piel = '#a9704e';
   return (
-    <g transform={`translate(${x} ${resp})`}>
-      {mujer ? (
-        <path d="M0 0 C -55 0 -70 60 -62 110 C -60 150 -80 190 -95 220 L 95 220 C 80 190 60 150 62 110 C 70 60 55 0 0 0 Z" fill="#0a0618" stroke={color} strokeWidth={5} />
-      ) : (
-        <path d="M0 10 C -48 10 -58 50 -54 90 C -52 120 -40 150 -30 160 L 30 160 C 40 150 52 120 54 90 C 58 50 48 10 0 10 Z" fill="#0a0618" stroke={color} strokeWidth={5} />
-      )}
-      <path d={mujer ? 'M-120 420 C -120 300 -80 230 0 225 C 80 230 120 300 120 420 Z' : 'M-150 420 C -150 290 -100 175 0 170 C 100 175 150 290 150 420 Z'} fill="#0a0618" stroke={color} strokeWidth={5} />
+    <g transform={`translate(${x} 0)`} style={{ filter: `drop-shadow(0 0 14px ${brillo})` }}>
+      <path d="M-56 -300 L -6 -300 L -12 -22 L -50 -22 Z" fill="#5b4b9e" {...borde} />
+      <path d="M6 -300 L 56 -300 L 50 -22 L 12 -22 Z" fill="#5b4b9e" {...borde} />
+      {[[-34, -250, 14, 22], [-28, -150, 10, 18], [-36, -80, 12, 16], [30, -230, 12, 20], [34, -120, 14, 18], [26, -60, 10, 14]].map(([cx, cy, rx, ry], i) => (
+        <ellipse key={i} cx={cx} cy={cy} rx={rx} ry={ry} fill={i % 2 ? '#8a7bd1' : '#3e2f78'} />
+      ))}
+      <ellipse cx={-34} cy={-14} rx={34} ry={16} fill="#f6f2ff" {...borde} strokeWidth={4} />
+      <ellipse cx={34} cy={-14} rx={34} ry={16} fill="#f6f2ff" {...borde} strokeWidth={4} />
+      <g transform={`translate(0 ${resp})`}>
+        <path d="M-60 -340 L 60 -340 L 58 -296 L -58 -296 Z" fill={piel} {...borde} strokeWidth={4} />
+        <path d="M-72 -508 Q -104 -484 -100 -404 L -94 -326 L -72 -326 L -74 -412 L -60 -470 Z" fill="#e2468f" {...borde} />
+        <path d="M72 -508 Q 104 -484 100 -404 L 94 -326 L 72 -326 L 74 -412 L 60 -470 Z" fill="#e2468f" {...borde} />
+        <circle cx={-84} cy={-316} r={14} fill={piel} {...borde} strokeWidth={3} />
+        <circle cx={84} cy={-316} r={14} fill={piel} {...borde} strokeWidth={3} />
+        <path d="M-72 -510 Q 0 -526 72 -510 L 60 -340 L -60 -340 Z" fill="#e2468f" {...borde} />
+        <rect x={-16} y={-548} width={32} height={42} fill={piel} {...borde} strokeWidth={4} />
+        <ellipse cx={0} cy={-596} rx={60} ry={64} fill="#2a1a14" />
+        {[[0, -672, 26], [-22, -690, 18], [22, -690, 18], [0, -706, 16], [-34, -668, 14], [34, -668, 14]].map(([cx, cy, r], i) => <circle key={i} cx={cx} cy={cy} r={r} fill="#2a1a14" />)}
+        <ellipse cx={0} cy={-588} rx={42} ry={52} fill={piel} {...borde} />
+        <path d="M-44 -600 Q -46 -650 0 -652 Q 46 -650 44 -600 Q 30 -630 0 -628 Q -30 -630 -44 -600 Z" fill="#2a1a14" />
+        <path d="M-42 -604 Q -60 -560 -48 -520" stroke="#2a1a14" strokeWidth={10} fill="none" strokeLinecap="round" />
+        <rect x={-22} y={-598} width={11} height={8} rx={3} fill="#1a1010" />
+        <rect x={11} y={-598} width={11} height={8} rx={3} fill="#1a1010" />
+        <path d="M-28 -610 L -10 -608 M 10 -608 L 28 -610" stroke="#1a1010" strokeWidth={5} strokeLinecap="round" />
+        <path d="M-10 -556 Q 0 -552 10 -556" stroke="#8a2e48" strokeWidth={6} fill="none" strokeLinecap="round" />
+      </g>
     </g>
   );
 };
@@ -399,10 +449,10 @@ const Pareja: React.FC<{ e: Extract<Escena, { tipo: 'pareja' }> }> = ({ e }) => 
   const lucia = e.quien !== 'jason';
   return (
     <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'flex-end' }}>
-      <svg width={1000} height={720} viewBox="-500 -280 1000 720" style={{ position: 'absolute', bottom: 0 }}>
-        <circle cx={0} cy={80} r={330} fill={C.rosa} opacity={0.12} />
-        {jason && <g opacity={sJ} transform={`translate(${(1 - sJ) * -200} 0)`}><Silueta x={lucia ? -150 : 0} color={C.cian} /></g>}
-        {lucia && <g opacity={sL} transform={`translate(${(1 - sL) * 200} 0)`}><Silueta mujer x={jason ? 150 : 0} color={C.rosa} /></g>}
+      <svg width={1000} height={740} viewBox="-500 -730 1000 740" style={{ position: 'absolute', bottom: 0 }}>
+        <circle cx={0} cy={-330} r={330} fill={C.rosa} opacity={0.14} />
+        {jason && <g opacity={sJ} transform={`translate(${(1 - sJ) * -200} 0)`}><PersonajeGTA quien="jason" x={lucia ? -130 : 0} brillo={C.cian} /></g>}
+        {lucia && <g opacity={sL} transform={`translate(${(1 - sL) * 200} 0)`}><PersonajeGTA quien="lucia" x={jason ? 130 : 0} brillo={C.rosa} /></g>}
       </svg>
       <div style={{ position: 'absolute', top: 90, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
         <Titular texto={e.titulo} tam={120} color={e.quien === 'jason' ? C.cian : C.rosa} />

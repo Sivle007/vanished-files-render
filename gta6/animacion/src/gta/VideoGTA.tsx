@@ -1,7 +1,7 @@
 import React from 'react';
 import { AbsoluteFill, Audio, CalculateMetadataFunction, Composition, interpolate, Sequence, staticFile, Still, useCurrentFrame } from 'remotion';
 import { Acabado, FondoGTA } from './Fondos';
-import { Escena, EscenaGTA, LogoNeon, MapaLeonida } from './Escenas';
+import { Escena, EscenaGTA, LogoNeon, MapaLeonida, PersonajeGTA } from './Escenas';
 import { C, FPS, Fondo, FUENTE_TEXTO, FUENTE_TITULO, neon } from './estilo';
 import v01 from '../../../videos/01-hora.json';
 import v02 from '../../../videos/02-ediciones.json';
@@ -130,12 +130,10 @@ const Visual: React.FC<{ v: Mini['visual']; color: string }> = ({ v, color }) =>
       return <div style={{ transform: 'scale(0.62)', transformOrigin: 'center' }}><MapaLeonida foco="vice" fijo /></div>;
     case 'pareja':
       return (
-        <svg width={640} height={600} viewBox="-320 -200 640 600">
-          <circle cx={0} cy={120} r={270} fill={C.rosa} opacity={0.2} />
-          <path d="M-170 -10 C -220 -10 -230 40 -226 80 C -224 110 -212 140 -202 150 L -142 150 C -132 140 -120 110 -118 80 C -114 40 -124 -10 -170 -10 Z" fill="#0a0618" stroke={C.cian} strokeWidth={8} />
-          <path d="M-320 400 C -320 280 -270 165 -170 160 C -70 165 -20 280 -20 400 Z" fill="#0a0618" stroke={C.cian} strokeWidth={8} />
-          <path d="M140 -20 C 85 -20 70 40 78 90 C 80 130 60 170 45 200 L 235 200 C 220 170 200 130 202 90 C 210 40 195 -20 140 -20 Z" fill="#0a0618" stroke={C.rosa} strokeWidth={8} />
-          <path d="M20 400 C 20 290 60 210 140 205 C 220 210 260 290 260 400 Z" fill="#0a0618" stroke={C.rosa} strokeWidth={8} />
+        <svg width={640} height={680} viewBox="-330 -740 660 760">
+          <circle cx={0} cy={-360} r={300} fill={C.rosa} opacity={0.22} />
+          <PersonajeGTA quien="jason" x={-110} brillo={C.cian} />
+          <PersonajeGTA quien="lucia" x={120} brillo={C.rosa} />
         </svg>
       );
     case 'online':
