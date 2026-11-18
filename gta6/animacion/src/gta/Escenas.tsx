@@ -1,6 +1,7 @@
 import React from 'react';
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 import { C, FUENTE_MARCA, FUENTE_TEXTO, FUENTE_TITULO, neon } from './estilo';
+import { Ficha, RepartoEscena } from './Reparto';
 
 // ---------- Tipos de escena (lo que escriben los guiones en GTa6/videos/*.json) ----------
 type Lado = { titulo: string; precio?: string; items: string[] };
@@ -20,7 +21,8 @@ export type Escena =
   | { tipo: 'cita'; texto: string; fuente: string }
   | { tipo: 'alerta'; texto: string; sub: string }
   | { tipo: 'flecha'; de: string; a: string; etiqueta: string }
-  | { tipo: 'cierre'; texto: string };
+  | { tipo: 'cierre'; texto: string }
+  | { tipo: 'reparto'; titulo: string; personajes: Ficha[] };
 
 // ---------- Ayudas de animación ----------
 const useEntrada = (retraso = 0, rigidez = 120) => {
@@ -613,5 +615,6 @@ export const EscenaGTA: React.FC<{ e: Escena; duracion: number }> = ({ e, duraci
     case 'alerta': return <Alerta e={e} />;
     case 'flecha': return <Flecha e={e} />;
     case 'cierre': return <Cierre e={e} />;
+    case 'reparto': return <RepartoEscena titulo={e.titulo} personajes={e.personajes} duracion={duracion} />;
   }
 };
